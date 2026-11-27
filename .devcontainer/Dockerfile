@@ -26,8 +26,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libasound2t64 libxtst6 xauth \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Yarn: the repo uses Yarn 1 (classic, yarn.lock v1, no packageManager field),
-# which the node image already ships in /usr/local/bin, so no corepack.
+# Yarn: the repo pins Yarn 4 in package.json "packageManager", which corepack
+# (bundled with Node 24) downloads on first use. Remove the image's Yarn 1 links
+# so the corepack shims take their place.
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+RUN rm -f /usr/local/bin/yarn /usr/local/bin/yarnpkg && corepack enable
 
 # Bun: used by the build script (tools/scripts/build.mjs) and the unit tests (bun test)
 COPY --from=bun /usr/local/bin/bun /usr/local/bin/bun

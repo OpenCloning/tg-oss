@@ -40,6 +40,9 @@ jobs:
       - name: Update npm
         run: npm install -g npm@^11.5.1
 
+      - name: Enable corepack (Yarn 4)
+        run: npm install -g corepack@latest && corepack enable
+
       - name: Check for New Versions
         id: check_versions
         run: |
@@ -78,7 +81,7 @@ jobs:
 
       - name: Install Dependencies
         if: steps.check_versions.outputs.packages_to_publish != ''
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Build and Publish
         if: steps.check_versions.outputs.packages_to_publish != ''

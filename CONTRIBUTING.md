@@ -11,11 +11,14 @@ The config files for each package should extend the root config files.
 
 Fork the repo, clone your fork locally and get into the project's root directory.
 
-Install dependencies with `yarn`:
+The repo uses Yarn 4, pinned in the `packageManager` field of `package.json`. Enable [corepack](https://nodejs.org/api/corepack.html) (bundled with Node) once so that `yarn` runs that version, then install dependencies:
 
 ```bash
+corepack enable
 yarn
 ```
+
+Packages in this repo depend on each other with `workspace:*` (e.g. `"@opencloning/tg-oss-range-utils": "workspace:*"`), which links the local copy. The build replaces it with the real version in `dist/`.
 
 ## Running tasks
 

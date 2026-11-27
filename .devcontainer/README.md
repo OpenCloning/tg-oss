@@ -1,6 +1,6 @@
 # Dev container
 
-Isolated development environment for tg-oss, based on the OpenCloning dev container: Node 24 with Yarn 1, Bun (builds and unit tests), Cypress and its system libraries (e2e tests), Python 3.12 via uv, Claude Code, and a firewall script that only allows the hosts the project needs (currently disabled, see the `exit 0` at the top of `init-firewall.sh`).
+Isolated development environment for tg-oss, based on the OpenCloning dev container: Node 24 with Yarn 4 (via corepack), Bun (builds and unit tests), Cypress and its system libraries (e2e tests), Python 3.12 via uv, Claude Code, and a firewall script that only allows the hosts the project needs (currently disabled, see the `exit 0` at the top of `init-firewall.sh`).
 
 ```sh
 devcontainer up --workspace-folder .

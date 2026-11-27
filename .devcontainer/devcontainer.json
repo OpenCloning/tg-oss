@@ -53,8 +53,8 @@
   },
   "initializeCommand": "git submodule update --init --remote || echo 'Reference repos not updated; using current versions'",
   // Runs before the firewall exists. The node_modules volume takes node ownership from the image directory.
-  // husky's "prepare" prints an error on the read-only .git, but the install still succeeds.
-  "postCreateCommand": "cd /workspace && yarn install --frozen-lockfile && yarn cypress install",
+  // husky (in "postinstall") prints an error on the read-only .git, but the install still succeeds.
+  "postCreateCommand": "cd /workspace && yarn install --immutable && yarn cypress install",
   "postStartCommand": "sudo /usr/local/bin/init-firewall.sh && /usr/local/bin/check-isolation.sh",
   "postAttachCommand": "/usr/local/bin/check-isolation.sh",
   "waitFor": "postStartCommand"
