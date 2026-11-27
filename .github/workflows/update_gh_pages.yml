@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+permissions:
+  contents: write # for deploying to the gh-pages branch
 jobs:
   update-gh-pages:
     strategy:
