@@ -82396,7 +82396,7 @@ const RenderCell = /* @__PURE__ */ __name(({
       className: "tg-cell-wrapper",
       "data-copy-text": text2,
       "data-copy-json": JSON.stringify(
-        //tnw: eventually we'll parse these back out and use either the fullValue (for the generic selects) or the regular text vals for everything else
+        // TODO: eventually we'll parse these back out and use either the fullValue (for the generic selects) or the regular text vals for everything else
         column.type === "genericSelect" ? {
           __strVal: fullValue,
           __genSelCol: column.path
@@ -90162,7 +90162,7 @@ const DataTable = /* @__PURE__ */ __name((_I) => {
           {
             fullscreen,
             in_cypress_test: window.Cypress,
-            //tnr: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed
+            // TODO: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed
             "dt-isViewable": isViewable,
             "dt-minimalStyle": minimalStyle,
             "no-padding": noPadding,
@@ -97211,7 +97211,7 @@ const InnerDropZone = /* @__PURE__ */ __name(({
       "tg-dropzone-minimal": minimal,
       "tg-dropzone-active": isDragActive,
       "tg-dropzone-reject": isDragReject,
-      // tnr: the acceptClassName/rejectClassName doesn't work with file extensions (only mimetypes are supported when dragging). Thus we'll just always turn the drop area blue when dragging and let the filtering occur on drop. See https://github.com/react-dropzone/react-dropzone/issues/888#issuecomment-773938074
+      // TODO: the acceptClassName/rejectClassName doesn't work with file extensions (only mimetypes are supported when dragging). Thus we'll just always turn the drop area blue when dragging and let the filtering occur on drop. See https://github.com/react-dropzone/react-dropzone/issues/888#issuecomment-773938074
       "tg-dropzone-accept": isDragAccept,
       "tg-dropzone-disabled": dropzoneDisabled,
       "bp3-disabled": dropzoneDisabled
@@ -101824,7 +101824,7 @@ const withHotkeys = /* @__PURE__ */ __name((hotkeys, handlers2) => {
       onKeyUp: handleKeyUp
     };
     return children ? (
-      //tnr: if children are passed, we'll clone them with the new props
+      // TODO: if children are passed, we'll clone them with the new props
       React.cloneElement(children, newProps)
     ) : (
       //if not, then we'll return a div that can be used
@@ -113829,12 +113829,12 @@ function VersionSwitcher({
   reactExports.useEffect(() => {
     (/* @__PURE__ */ __name(function fetchData() {
       return __async(this, null, function* () {
-        const res = yield __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../bio-parsers/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-D_uEZkzR.js"), true ? [] : void 0, import.meta.url), "../../bio-parsers/package.json"), "../../file-utils/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-CVi55Bnl.js"), true ? [] : void 0, import.meta.url), "../../file-utils/package.json"), "../../ove/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-C_FlIO3G.js"), true ? [] : void 0, import.meta.url), "../../ove/package.json"), "../../range-utils/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-CreA7Lvd.js"), true ? [] : void 0, import.meta.url), "../../range-utils/package.json"), "../../sequence-utils/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-pK2rYDoz.js"), true ? [] : void 0, import.meta.url), "../../sequence-utils/package.json"), "../package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-D8eyE4je.js"), true ? [] : void 0, import.meta.url), "../package.json"), "../../ui/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-BcAEYxFX.js"), true ? [] : void 0, import.meta.url), "../../ui/package.json") }), `../../${packageName}/package.json`, 4);
+        const res = yield __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../bio-parsers/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-B_YjrXFR.js"), true ? [] : void 0, import.meta.url), "../../bio-parsers/package.json"), "../../file-utils/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-B4V8yZxG.js"), true ? [] : void 0, import.meta.url), "../../file-utils/package.json"), "../../ove/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-D6r3jQiX.js"), true ? [] : void 0, import.meta.url), "../../ove/package.json"), "../../range-utils/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-MbP-6BK-.js"), true ? [] : void 0, import.meta.url), "../../range-utils/package.json"), "../../sequence-utils/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-BGiKf0ou.js"), true ? [] : void 0, import.meta.url), "../../sequence-utils/package.json"), "../package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-D8eyE4je.js"), true ? [] : void 0, import.meta.url), "../package.json"), "../../ui/package.json": /* @__PURE__ */ __name(() => __vitePreload(() => import("./package-Cat6ZBuX.js"), true ? [] : void 0, import.meta.url), "../../ui/package.json") }), `../../${packageName}/package.json`, 4);
         setVersion(res.version);
         try {
           if (window.Cypress) return;
           let res2 = yield (yield window.fetch(
-            "https://api.github.com/repos/teselagen/tg-oss/git/trees/gh-pages"
+            "https://api.github.com/repos/OpenCloning/tg-oss/git/trees/gh-pages"
           )).json();
           const packageNode = res2.tree.find((e) => {
             return e.path.toLowerCase() === packageName;
@@ -113868,7 +113868,7 @@ function VersionSwitcher({
   return /* @__PURE__ */ React.createElement("div", { style: { display: "flex", alignItems: "center" } }, leftComponent, /* @__PURE__ */ React.createElement("div", { style: { paddingTop: 13, display: "flex", marginRight: 20 } }, /* @__PURE__ */ React.createElement(
     "iframe",
     {
-      src: "https://ghbtns.com/github-btn.html?user=teselagen&repo=tg-oss&type=star&count=true",
+      src: "https://ghbtns.com/github-btn.html?user=OpenCloning&repo=tg-oss&type=star&count=true",
       frameBorder: "0",
       scrolling: "0",
       width: "100",
@@ -113880,7 +113880,7 @@ function VersionSwitcher({
     {
       minimal: true,
       onChange: /* @__PURE__ */ __name(function onChange(e) {
-        window.location.href = `https://teselagen.github.io/tg-oss/${packageName}/version/${e.currentTarget.value}/#/Editor`;
+        window.location.href = `https://opencloning.github.io/tg-oss/${packageName}/version/${e.currentTarget.value}/#/Editor`;
       }, "onChange"),
       value: version,
       options
@@ -113891,7 +113891,7 @@ function VersionSwitcher({
       target: "_blank",
       rel: "noopener noreferrer",
       style: { marginLeft: 10, marginTop: 2 },
-      href: "https://github.com/TeselaGen/tg-oss/blob/master/CHANGELOG.md"
+      href: "https://github.com/OpenCloning/tg-oss/blob/master/CHANGELOG.md"
     },
     "Changelog"
   )) : (
@@ -114027,11 +114027,11 @@ const DemoNav = /* @__PURE__ */ __name(({ demos: demos2, isOpen: isOpen2, setIsO
     }),
     /* @__PURE__ */ React.createElement("br", null),
     /* @__PURE__ */ React.createElement("br", null),
-    "Teselagen Open Source UI Library Demo",
+    "Open Source UI Library Demo",
     /* @__PURE__ */ React.createElement(
       "a",
       {
-        href: "https://teselagen.github.io/tg-oss/ui/",
+        href: "https://opencloning.github.io/tg-oss/ui/",
         style: { fontSize: 16 },
         rel: "noreferrer",
         target: "_blank"
@@ -114039,11 +114039,11 @@ const DemoNav = /* @__PURE__ */ __name(({ demos: demos2, isOpen: isOpen2, setIsO
       "tg-oss/ui demo page"
     ),
     /* @__PURE__ */ React.createElement("br", null),
-    "Teselagen Open Vector Editor - OVE - (Vector/Plasmid Editor) Demo",
+    "Open Vector Editor - OVE - (Vector/Plasmid Editor) Demo",
     /* @__PURE__ */ React.createElement(
       "a",
       {
-        href: "https://teselagen.github.io/tg-oss/ove/",
+        href: "https://opencloning.github.io/tg-oss/ove/",
         style: { fontSize: 16 },
         rel: "noreferrer",
         target: "_blank"
@@ -114115,15 +114115,14 @@ const DemoPage = /* @__PURE__ */ __name(({ moduleName, demos: demos2, showCompon
                 icon: "chevron-right"
               }
             ),
-            packageName: `${moduleName}`,
-            testBadge: `[![@opencloning/tg-oss-${moduleName}](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/gwixeq/master&style=flat&logo=cypress)](https://cloud.cypress.io/projects/gwixeq/runs)`
+            packageName: `${moduleName}`
           }
         ),
         /* @__PURE__ */ React.createElement(
           "a",
           {
             style: { fontSize: 16 },
-            href: `https://github.com/TeselaGen/tg-oss/tree/master/packages/${moduleName}`
+            href: `https://github.com/OpenCloning/tg-oss/tree/master/packages/${moduleName}`
           },
           "@opencloning/tg-oss-",
           `${moduleName}`

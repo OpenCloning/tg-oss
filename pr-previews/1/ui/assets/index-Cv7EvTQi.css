@@ -9109,7 +9109,7 @@ button:not(:disabled):active {
 } */
 
 .bp3-dialog-header .bp3-heading {
-  width: 10px; /* tnw: this is a hack to prevent the dialog title from causing the dialog width to expand larger than the dialog content*/
+  width: 10px; /* TODO: this is a hack to prevent the dialog title from causing the dialog width to expand larger than the dialog content*/
 }
 
 /* to fix tooltip styling issue - https://github.com/palantir/blueprint/issues/3430 */
@@ -9635,7 +9635,7 @@ button:not(:disabled):active {
   border: var(--cell-border-width) solid rgba(212, 212, 212, 0);
 }
 
-/* tgreen: we don't want the border for rows that don't have any data */
+/* TODO: we don't want the border for rows that don't have any data */
 .ReactTable.ReactTable .rt-tbody .rt-tr-group.no-row-data {
   min-height: 0px;
   border-bottom: none;
@@ -9814,7 +9814,7 @@ body:not(.drag-active)
   background: #ebf1f5;
   z-index: 2;
 }
-/* tnr: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed */
+/* TODO: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed */
 .in_cypress_test .ReactTable .rt-thead {
   position: unset;
 }
@@ -10526,7 +10526,7 @@ body:not(.drag-active)
   display: none;
 }
 
-/* removing the display inline styling because they broke menu positioning: https://github.com/TeselaGen/lims/issues/2563 */
+/* removing the display inline styling because they broke menu positioning */
 /* .tg-menu-bar-popover .bp3-popover-wrapper {
   display: inline;
 }

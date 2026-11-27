@@ -1,7 +1,7 @@
 const name = "@opencloning/tg-oss-file-utils";
 const version = "1.0.0";
 const type = "module";
-const repository = "https://github.com/manulera/tg-oss";
+const repository = "https://github.com/OpenCloning/tg-oss";
 const dependencies = { "jszip": "^3.10.1", "lodash-es": "^4.17.21", "papaparse": "5.3.2", "buffer": "5.7.1" };
 const _package = {
   name,
