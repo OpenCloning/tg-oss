@@ -2,7 +2,7 @@ const name = "@opencloning/tg-oss-sequence-utils";
 const version = "1.0.0";
 const repository = "https://github.com/OpenCloning/tg-oss";
 const type = "module";
-const dependencies = { "@opencloning/tg-oss-range-utils": "file:../range-utils", "escape-string-regexp": "5.0.0", "jsondiffpatch": "^0.7.7", "lodash-es": "^4.17.21", "nanoid": "^5.1.16", "string-splice": "^1.3.0" };
+const dependencies = { "@opencloning/tg-oss-range-utils": "workspace:*", "escape-string-regexp": "5.0.0", "jsondiffpatch": "^0.7.7", "lodash-es": "^4.17.21", "nanoid": "^5.1.16", "string-splice": "^1.3.0" };
 const exports = { ".": { "import": "./index.js", "require": "./index.cjs" } };
 const _package = {
   name,
