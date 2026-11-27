@@ -9069,7 +9069,7 @@ button:not(:disabled):active {
 } */
 
 .bp3-dialog-header .bp3-heading {
-  width: 10px; /* tnw: this is a hack to prevent the dialog title from causing the dialog width to expand larger than the dialog content*/
+  width: 10px; /* TODO: this is a hack to prevent the dialog title from causing the dialog width to expand larger than the dialog content*/
 }
 
 /* to fix tooltip styling issue - https://github.com/palantir/blueprint/issues/3430 */
@@ -9603,7 +9603,7 @@ button:not(:disabled):active {
   border: var(--cell-border-width) solid rgba(212, 212, 212, 0);
 }
 
-/* tgreen: we don't want the border for rows that don't have any data */
+/* TODO: we don't want the border for rows that don't have any data */
 .ReactTable.ReactTable .rt-tbody .rt-tr-group.no-row-data {
   min-height: 0px;
   border-bottom: none;
@@ -9782,7 +9782,7 @@ body:not(.drag-active)
   background: #ebf1f5;
   z-index: 2;
 }
-/* tnr: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed */
+/* TODO: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed */
 .in_cypress_test .ReactTable .rt-thead {
   position: unset;
 }
@@ -10526,7 +10526,7 @@ body:not(.drag-active)
   display: none;
 }
 
-/* removing the display inline styling because they broke menu positioning: https://github.com/TeselaGen/lims/issues/2563 */
+/* removing the display inline styling because they broke menu positioning */
 /* .tg-menu-bar-popover .bp3-popover-wrapper {
   display: inline;
 }
@@ -10949,7 +10949,7 @@ path.partWithSelectedTag {
 .veRowViewOrfsContainer {
   z-index: 20;
 }
-/* TNR: ENABLING THIS WILL BREAK SMOOTH SCROLLING FOR THE ROW VIEW
+/* TODO: ENABLING THIS WILL BREAK SMOOTH SCROLLING FOR THE ROW VIEW
 .rowViewTextContainer {
   user-select: none;
 } 
@@ -11212,7 +11212,7 @@ path.partWithSelectedTag {
   overflow: auto;
 }
 
-/* tnw: we had added overflow: auto; only when isLinViewZoomed to prevent the scrollbar from showing up in cases where we didn't want it. We'll need to figure how to prevent the scrollbar from appearing in a different way since we DO need to the scrollbar in certain cases even when isLinViewZoomed=false */
+/* TODO: we had added overflow: auto; only when isLinViewZoomed to prevent the scrollbar from showing up in cases where we didn't want it. We'll need to figure how to prevent the scrollbar from appearing in a different way since we DO need to the scrollbar in certain cases even when isLinViewZoomed=false */
 /* .veLinearView.isLinViewZoomed .veRowItemWrapper {
   overflow: auto;
 } */
@@ -11405,7 +11405,7 @@ path.partWithSelectedTag {
 .alignmentView .veSelectionLayer {
   top: 0;
 }
-/* tnw - commenting this out to improve scrolling of alignment view inside editor - https://github.com/TeselaGen/tg-oss/issues/128 */
+/* TODO: commenting this out to improve scrolling of alignment view inside editor - https://github.com/TeselaGen/tg-oss/issues/128 */
 /* .tg-reflex-element-inner .alignmentView {
   height: unset !important;
 } */
