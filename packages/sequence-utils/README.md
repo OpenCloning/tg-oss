@@ -71,12 +71,10 @@ See the [README](../README.md)
 
 fork and pull request please :)
 
-This library was generated with [Nx](https://nx.dev).
-
 ## Building
 
-Run `nx build sequence-utils` to build the library.
+Run `yarn workspace @opencloning/tg-oss-sequence-utils build` to build the library.
 
 ## Running unit tests
 
-Run `nx test sequence-utils` to execute the unit tests via [Jest](https://jestjs.io).
+Run `yarn workspace @opencloning/tg-oss-sequence-utils test` to execute the unit tests (with bun).

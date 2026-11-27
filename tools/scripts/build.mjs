@@ -4,12 +4,18 @@ import path from "node:path";
 // 1. Bun-native path helpers
 const workspaceRoot = path.resolve(import.meta.dir, "../../");
 
-// 2. Bun.argv is the canonical way to access arguments
-const projectRoot = argv[2];
-const args = argv.slice(3).filter(arg => arg !== "{args}");
+// 2. Arguments: [projectRoot] [...vite build args]
+// projectRoot (e.g. packages/ove) defaults to the current directory, which is the
+// package directory when run from a package.json script (`yarn build`).
+// Extra args (e.g. --mode=demo) are passed on to vite build.
+const hasProjectRoot = argv[2] && !argv[2].startsWith("-");
+const projectRoot = hasProjectRoot
+  ? argv[2]
+  : path.relative(workspaceRoot, process.cwd());
+const args = argv.slice(hasProjectRoot ? 3 : 2);
 
-if (!projectRoot) {
-  console.error("Project root is required");
+if (!projectRoot || projectRoot.startsWith("..")) {
+  console.error("Run this from a package directory, or pass its path");
   process.exit(1);
 }
 

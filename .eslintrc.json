@@ -1,7 +1,6 @@
 {
   "root": true,
-  "plugins": ["@nx"],
-  "extends": ["plugin:@nx/react", "plugin:jsonc/base"],
+  "extends": ["./tools/eslint/react.cjs", "plugin:jsonc/base"],
   "parserOptions": {
     "sourceType": "module",
     "allowImportExportEverywhere": true
@@ -34,30 +33,17 @@
             "classes": false,
             "variables": false
           }
-        ],
-        "@nx/enforce-module-boundaries": [
-          "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
         ]
       }
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nx/typescript"],
+      "extends": ["./tools/eslint/typescript.cjs"],
       "rules": {}
     },
     {
       "files": ["*.js", "*.jsx", "*.mjs"],
-      "extends": ["plugin:@nx/javascript"],
+      "extends": ["./tools/eslint/javascript.cjs"],
       "rules": {}
     },
     {

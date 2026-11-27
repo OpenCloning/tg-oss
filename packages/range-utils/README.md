@@ -72,12 +72,10 @@ Tests will automatically be run pre-commit.
 
 fork and pull request please :)
 
-This library was generated with [Nx](https://nx.dev).
-
 ## Building
 
-Run `nx build range-utils` to build the library.
+Run `yarn workspace @opencloning/tg-oss-range-utils build` to build the library.
 
 ## Running unit tests
 
-Run `nx test range-utils` to execute the unit tests via [Jest](https://jestjs.io).
+Run `yarn workspace @opencloning/tg-oss-range-utils test` to execute the unit tests (with bun).

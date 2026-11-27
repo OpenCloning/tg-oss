@@ -51,7 +51,7 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: yarn install --immutable
 
-      - run: yarn nx run ${{ matrix.package_name }}:build --configuration=demo
+      - run: yarn workspace @opencloning/tg-oss-${{ matrix.package_name }} build:demo
         if: steps.check.outputs.changed == 'true'
 
       - name: Deploy Version  🚀

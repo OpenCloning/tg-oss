@@ -1,11 +1,9 @@
 # file-utils
 
-This library was generated with [Nx](https://nx.dev).
-
 ## Building
 
-Run `nx build file-utils` to build the library.
+Run `yarn workspace @opencloning/tg-oss-file-utils build` to build the library.
 
 ## Running unit tests
 
-Run `nx test file-utils` to execute the unit tests via [Jest](https://jestjs.io).
+Run `yarn workspace @opencloning/tg-oss-file-utils test` to execute the unit tests (with bun).

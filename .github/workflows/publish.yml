@@ -87,16 +87,19 @@ jobs:
         if: steps.check_versions.outputs.packages_to_publish != ''
         run: |
           PACKAGES="${{ steps.check_versions.outputs.packages_to_publish }}"
-          # Convert space-separated list to comma-separated for nx
-          PROJECTS_CSV=$(echo "$PACKAGES" | tr ' ' ',')
+          # One --from per package to publish, e.g. --from @opencloning/tg-oss-ove
+          FROM_ARGS=""
+          for PKG in $PACKAGES; do
+            FROM_ARGS="$FROM_ARGS --from @opencloning/tg-oss-$PKG"
+          done
 
           echo "Building packages: $PACKAGES"
 
-          # Build standard. Using --projects to only build what's needed.
-          yarn nx run-many --target=build --projects="$PROJECTS_CSV" --skip-nx-cache
+          # Build those packages and the packages they depend on (--recursive), dependencies first (--topological)
+          yarn workspaces foreach --recursive --topological --parallel $FROM_ARGS run build
 
-          # Attempt build_umd, allowing failure if target doesn't exist for some packages
-          yarn nx run-many --target=build_umd --projects="$PROJECTS_CSV" --skip-nx-cache || echo "build_umd failed or not found for some projects, continuing..."
+          # UMD bundles, only ove and ui have a build:umd script (the others are skipped)
+          yarn workspaces foreach --parallel $FROM_ARGS run build:umd || echo "build:umd failed for some packages, continuing..."
 
           # Determine tag based on branch
           if [[ "${{ github.ref_name }}" == "beta" ]]; then

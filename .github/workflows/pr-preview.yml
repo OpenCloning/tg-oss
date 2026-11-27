@@ -31,7 +31,7 @@ jobs:
           CYPRESS_INSTALL_BINARY: 0
 
       - name: Build Demo
-        run: yarn nx run ${{ matrix.package_name }}:build --configuration=demo
+        run: yarn workspace @opencloning/tg-oss-${{ matrix.package_name }} build:demo
 
       - name: Deploy Preview 🚀
         uses: JamesIves/github-pages-deploy-action@v4

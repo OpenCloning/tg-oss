@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 
 import viteTsConfigPaths from "vite-tsconfig-paths";
 import dts from "vite-plugin-dts";
-import { joinPathFragments } from "@nx/devkit";
+import path from "node:path";
 import { camelCase } from "lodash-es";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
@@ -23,7 +23,7 @@ const conf = ({
       dts({
         exclude: ["**/*.test.ts", "**/*.spec.ts"],
         entryRoot: "src",
-        tsconfigPath: joinPathFragments(dir, "tsconfig.json")
+        tsconfigPath: path.join(dir, "tsconfig.json")
       }),
       viteTsConfigPaths({
         root: "../../"

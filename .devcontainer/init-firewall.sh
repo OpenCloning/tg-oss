@@ -124,7 +124,7 @@ for domain in \
 done
 
 echo adding project hosts
-# Cypress binary downloads (yarn cypress install) and Cypress Cloud (e2e "record": true in nx.json)
+# Cypress binary downloads (yarn cypress install) and Cypress Cloud (the e2e scripts of ove and ui use --record)
 for domain in \
     "download.cypress.io" \
     "cdn.cypress.io" \
