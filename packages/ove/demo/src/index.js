@@ -23,7 +23,6 @@ import EditorDemo from "./EditorDemo";
 import VersionHistoryViewDemo from "./VersionHistoryViewDemo";
 
 import "./style.css";
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { DemoPage } from "@opencloning/shared-demo";
 
 const demos = {

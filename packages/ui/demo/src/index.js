@@ -13,7 +13,6 @@ import TgSelectDemo from "./examples/TgSelectDemo";
 import InfoHelper from "./examples/InfoHelper";
 import Loading from "./examples/Loading";
 import PromptUnsavedChanges from "./examples/PromptUnsavedChanges";
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { DemoPage } from "@opencloning/shared-demo";
 import FillWindowExample from "./examples/FillWindow";
 

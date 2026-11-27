@@ -50,7 +50,6 @@ playwright-report
 playwright/.cache
 downloads
 .vite
-.nx
 
 # Yarn 4 (same entries as OpenCloning/js)
 .yarn/*

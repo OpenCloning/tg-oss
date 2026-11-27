@@ -2,13 +2,10 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "nx",
-      "project": "",
-      "command": "run",
-      "positional": "ove:launch-e2e",
-      "flags": [],
+      "type": "shell",
+      "command": "yarn workspace @opencloning/tg-oss-ove launch-e2e",
       "problemMatcher": [],
-      "label": "nx: nx run ove:launch-e2e"
+      "label": "ove: launch-e2e"
     }
   ]
 }

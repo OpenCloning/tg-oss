@@ -13,7 +13,7 @@ Once inside, `check-isolation.sh` should report no failures. The repo's `.git` i
 
 ```sh
 bun test                              # unit tests for all packages
-yarn nx run ove:build                 # build a package into dist/
-yarn nx run ove:start                 # ove demo on http://localhost:8805 (ui: 7614)
-yarn nx run ove:e2e:local             # Cypress e2e headless, without Cypress Cloud
+yarn workspace @opencloning/tg-oss-ove build       # build a package into dist/
+yarn workspace @opencloning/tg-oss-ove start       # ove demo on http://localhost:8805 (ui: 7614)
+yarn workspace @opencloning/tg-oss-ove e2e:local   # Cypress e2e headless, without Cypress Cloud
 ```

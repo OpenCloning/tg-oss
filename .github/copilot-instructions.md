@@ -17,7 +17,7 @@ This monorepo contains multiple open-source packages focused on biological seque
 
 ### Monorepo Structure
 
-- Uses NX for monorepo management
+- Yarn 4 workspaces monorepo, tasks are `package.json` scripts
 - Packages in `/packages/{package-name}`
 - Each UI package has:
 
@@ -56,24 +56,24 @@ yarn
 
 ### Running Tasks
 
-Use NX to run tasks:
+Tasks are `package.json` scripts (see CONTRIBUTING.md):
 
 ```bash
 # Start demos
-nx run ui:start
-nx run ove:start
+yarn workspace @opencloning/tg-oss-ui start
+yarn workspace @opencloning/tg-oss-ove start
 
 # Run E2E tests
-nx run ove:launch-e2e
+yarn workspace @opencloning/tg-oss-ove launch-e2e
 
 # Build packages
-nx run-many --target=build
+yarn build
 ```
 
 ### Testing
 
 - **Unit tests**: Run with `bun test` from root
-- **E2E tests**: Run with `nx run [package]:launch-e2e`
+- **E2E tests**: Run with `yarn workspace @opencloning/tg-oss-<package> launch-e2e`
 - **CI**: Runs on GitHub Actions on push/PR
 
 ## Key Concepts

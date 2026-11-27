@@ -69,6 +69,13 @@ try {
     }
   };
 
+  // The scripts are for developing in this repo (they point to ../../tools etc.),
+  // so they should not be published
+  if (pkg.scripts) {
+    delete pkg.scripts;
+    hasChanges = true;
+  }
+
   if (pkg.dependencies) updateDeps(pkg.dependencies);
   if (pkg.peerDependencies) updateDeps(pkg.peerDependencies);
   // usually devDependencies are not in the built package.json, but just in case
@@ -80,9 +87,7 @@ try {
       `Successfully updated dependencies in ${builtPackageJsonPath}`
     );
   } else {
-    console.info(
-      `No 'workspace:' dependencies found to update in ${builtPackageJsonPath}`
-    );
+    console.info(`Nothing to update in ${builtPackageJsonPath}`);
   }
 } catch (err) {
   console.error("Error updating package dependencies:", err);

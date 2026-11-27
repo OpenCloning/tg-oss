@@ -9,7 +9,6 @@ import { getPort } from "./getPort";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import path from "node:path";
 import dts from "vite-plugin-dts";
-import { joinPathFragments } from "nx/src/devkit-exports";
 
 //vite config for react packages
 
@@ -64,7 +63,7 @@ export default ({ name, dir }: { name: string; dir: string }) =>
         dts({
           exclude: ["**/*.test.ts", "**/*.spec.ts"],
           entryRoot: "src",
-          tsconfigPath: joinPathFragments(dir, "tsconfig.json")
+          tsconfigPath: path.join(dir, "tsconfig.json")
           // skipDiagnostics: true,
         }),
         react({

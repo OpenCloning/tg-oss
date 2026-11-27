@@ -16,5 +16,10 @@
       "import": "./index.js",
       "require": "./index.cjs"
     }
+  },
+  "scripts": {
+    "build": "bun ../../tools/scripts/build.mjs",
+    "lint": "yarn run -T eslint \"**/*.{ts,tsx,js,jsx}\" package.json --max-warnings=0",
+    "test": "cd ../.. && bun test packages/sequence-utils"
   }
 }

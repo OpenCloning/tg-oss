@@ -8,5 +8,10 @@
     "jszip": "^3.10.1",
     "lodash-es": "^4.17.21",
     "papaparse": "5.3.2"
+  },
+  "scripts": {
+    "build": "bun ../../tools/scripts/build.mjs",
+    "lint": "yarn run -T eslint \"**/*.{ts,tsx,js,jsx}\" package.json --max-warnings=0",
+    "test": "cd ../.. && bun test packages/file-utils"
   }
 }

@@ -65,5 +65,16 @@
     "react-markdown": "9.0.1",
     "remark-gfm": "^4.0.0",
     "to-regex-range": "5.0.1"
+  },
+  "scripts": {
+    "start": "yarn run -T vite",
+    "build": "bun ../../tools/scripts/build.mjs",
+    "build:demo": "bun ../../tools/scripts/build.mjs --mode=demo",
+    "build:umd": "bun ../../tools/scripts/build.mjs --mode=umd",
+    "lint": "yarn run -T eslint \"**/*.{ts,tsx,js,jsx}\" package.json --max-warnings=0",
+    "test": "cd ../.. && bun test packages/ove",
+    "e2e": "node ../../tools/scripts/e2e.mjs run --e2e --record --parallel",
+    "e2e:local": "node ../../tools/scripts/e2e.mjs run --e2e",
+    "launch-e2e": "node ../../tools/scripts/e2e.mjs open --e2e --browser chrome"
   }
 }

@@ -25,8 +25,7 @@
         "timonwong.shellcheck",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "shelex.vscode-cy-helper",
-        "nrwl.angular-console"
+        "shelex.vscode-cy-helper"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"

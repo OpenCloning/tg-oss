@@ -22,36 +22,33 @@ Packages in this repo depend on each other with `workspace:*` (e.g. `"@opencloni
 
 ## Running tasks
 
-We use [NX](https://nx.dev) to run tasks and cache the results.
-NX allows us to only lint/build/test the packages that have changed since the last commit and caches the results of the tasks for efficient reruns.
+Tasks are `package.json` scripts. Each package has its own (`build`, `lint`, `test`, and for ove and ui also `start`, `build:demo`, `build:umd`, `e2e`, `e2e:local` and `launch-e2e`), and the root ones run them across all packages.
 
-### Command line
-
-```bash
-nx run <package-name>:<command>
-```
+### One package
 
 ```bash
-nx run ui:start
-nx run ove:start
-nx run ove:launch-e2e
-nx run ove:build
+yarn workspace @opencloning/tg-oss-<package> <script>
 ```
+
+or `yarn <script>` from inside `packages/<package>`. For example:
 
 ```bash
-nx run --target:<command>
+yarn workspace @opencloning/tg-oss-ui start          # demo dev server
+yarn workspace @opencloning/tg-oss-ove start
+yarn workspace @opencloning/tg-oss-ove launch-e2e    # dev server + Cypress app
+yarn workspace @opencloning/tg-oss-ove e2e:local     # dev server + headless Cypress
+yarn workspace @opencloning/tg-oss-ove build         # into dist/ove
+yarn workspace @opencloning/tg-oss-ove build:demo    # demo app into demo-dist/ove
 ```
+
+### All packages
 
 ```bash
-nx run-many --target:build
-nx run-many --target:build
+yarn build      # every package, dependencies first
+yarn build:umd  # UMD bundles (ove and ui)
+yarn lint
+yarn test       # bun test
 ```
-
-### Editor integration
-
-Integrations of `NX` exist for VCCode, JetBrains and Neovim editors, you can install them to run nx commands from your editor directly:
-
-https://nx.dev/core-features/integrate-with-editors
 
 ## How to Publish
 

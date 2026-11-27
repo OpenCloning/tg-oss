@@ -1,6 +1,6 @@
 {
   "**/*.{js,ts,jsx,tsx}": [
-    "nx affected:lint --fix --files",
+    "eslint --fix --max-warnings=0",
     "prettier --write -u"
   ],
   "!**/*.{js,ts,jsx,tsx}": "prettier --write -u"

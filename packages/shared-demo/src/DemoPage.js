@@ -5,7 +5,6 @@ import classNames from "classnames";
 import DemoNav from "./DemoNav";
 
 import "./style.css";
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { DataTable } from "@opencloning/tg-oss-ui";
 import VersionSwitcher from "./VersionSwitcher";
 

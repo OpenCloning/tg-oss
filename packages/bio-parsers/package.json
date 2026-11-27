@@ -9,6 +9,7 @@
     "@opencloning/tg-oss-sequence-utils": "workspace:*",
     "bufferpack": "^0.0.6",
     "color": "3.2.1",
+    "events": "^3.3.0",
     "fast-xml-parser": "^5.12.1",
     "fflate": "^0.8.3",
     "lodash-es": "^4.17.21",
@@ -19,5 +20,13 @@
       "import": "./index.js",
       "require": "./index.cjs"
     }
+  },
+  "scripts": {
+    "build": "bun ../../tools/scripts/build.mjs",
+    "lint": "yarn run -T eslint \"**/*.{ts,tsx,js,jsx}\" package.json --max-warnings=0",
+    "test": "cd ../.. && bun test packages/bio-parsers"
+  },
+  "devDependencies": {
+    "@types/events": "^3"
   }
 }
