@@ -2,7 +2,7 @@
   "name": "@opencloning/tg-oss-bio-parsers",
   "version": "1.0.0",
   "type": "module",
-  "repository": "https://github.com/manulera/tg-oss",
+  "repository": "https://github.com/OpenCloning/tg-oss",
   "dependencies": {
     "@gmod/gff": "^1.2.1",
     "bufferpack": "^0.0.6",

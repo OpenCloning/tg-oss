@@ -1,7 +1,7 @@
 {
   "name": "@opencloning/tg-oss-sequence-utils",
   "version": "1.0.0",
-  "repository": "https://github.com/manulera/tg-oss",
+  "repository": "https://github.com/OpenCloning/tg-oss",
   "type": "module",
   "dependencies": {
     "@opencloning/tg-oss-range-utils": "file:../range-utils",

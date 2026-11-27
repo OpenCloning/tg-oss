@@ -9,7 +9,7 @@
     "test": "nx affected -t test"
   },
   "type": "module",
-  "repository": "https://github.com/manulera/tg-oss",
+  "repository": "https://github.com/OpenCloning/tg-oss",
   "private": true,
   "dependencies": {},
   "devDependencies": {

@@ -8,7 +8,7 @@ Congrats, you've made it to the repo for the Open Source Vector Editor Component
 
 ## [CHANGELOG](CHANGELOG.md)
 
-## Demo: https://manulera.github.io/tg-oss/ove/#/Editor
+## Demo: https://opencloning.github.io/tg-oss/ove/#/Editor
 
 ## OVE out in the wild (Who's using OVE):
 
@@ -23,7 +23,7 @@ Congrats, you've made it to the repo for the Open Source Vector Editor Component
 <!-- TOC -->
 
 - [[CHANGELOG](CHANGELOG.md)](#changelogchangelogmd)
-- [Demo: https://manulera.github.io/tg-oss/ove/#/Editor](#demo-httpsmanuleragithubiotg-ossoveeditor)
+- [Demo: https://opencloning.github.io/tg-oss/ove/#/Editor](#demo-httpsopencloninggithubiotg-ossoveeditor)
 - [OVE out in the wild (Who's using OVE):](#ove-out-in-the-wild-whos-using-ove)
 - [Table of Contents](#table-of-contents)
 - [Upgrade Instructions for Major and Minor Versions](#upgrade-instructions-for-major-and-minor-versions)
@@ -41,7 +41,7 @@ Congrats, you've made it to the repo for the Open Source Vector Editor Component
     - [Full Example:](#full-example)
   - [Code (Universal)](#code-universal)
     - [Accessing the editor state:](#accessing-the-editor-state)
-  - [Demo (Universal): https://manulera.github.io/tg-oss/ove/](#demo-universal-httpsmanuleragithubiotg-ossove)
+  - [Demo (Universal): https://opencloning.github.io/tg-oss/ove/](#demo-universal-httpsopencloninggithubiotg-ossove)
 - [editorProps](#editorprops)
 - [editorState](#editorstate)
 - [Setting Local Storage Persisted Values](#setting-local-storage-persisted-values)
@@ -76,7 +76,7 @@ Congrats, you've made it to the repo for the Open Source Vector Editor Component
 This repo follows semantic versioning (major/minor/patche)
 
 The commit log can be seen here:
-https://github.com/manulera/tg-oss/commits/master/packages/ove
+https://github.com/OpenCloning/tg-oss/commits/master/packages/ove
 
 Upgrade instructions for any major or minor change can be found here:
 [Upgrade instructions](UPGRADE_INSTRUCTIONS.md)
@@ -173,8 +173,8 @@ then add the links
 
 ### Full Example:
 
-A full example of how to set up the unpkg/UMD demo can be seen here: https://github.com/manulera/tg-oss/blob/master/packages/ove/public/UMDDemo.html
-Demo here https://manulera.github.io/tg-oss/ove/UMDDemo.html
+A full example of how to set up the unpkg/UMD demo can be seen here: https://github.com/OpenCloning/tg-oss/blob/master/packages/ove/public/UMDDemo.html
+Demo here https://opencloning.github.io/tg-oss/ove/UMDDemo.html
 
 ## Code (Universal)
 
@@ -193,7 +193,7 @@ const currentEditorState = editor.getState();
 console.info(currentEditorState.selectionLayer);
 ```
 
-## Demo (Universal): https://manulera.github.io/tg-oss/ove/
+## Demo (Universal): https://opencloning.github.io/tg-oss/ove/
 
 # editorProps
 
@@ -417,7 +417,7 @@ They look like this:
 # Protein Editor
 
 OVE can be set up to view and edit proteins (Amino Acid sequences) as first class citizens.
-The protein editor can be seen here: https://manulera.github.io/tg-oss/ove/#/Editor?moleculeType=Protein
+The protein editor can be seen here: https://opencloning.github.io/tg-oss/ove/#/Editor?moleculeType=Protein
 
 The editor supports Amino Acid sequences as well as DNA sequences!
 Protein sequence mode is enabled by calling updateEditor with a protein sequenceData object:
@@ -658,7 +658,7 @@ window.createVectorEditor({
 
 ## Auto annotate addon:
 
-https://github.com/manulera/tg-oss/blob/master/packages/ove/src/AutoAnnotate.js
+https://github.com/OpenCloning/tg-oss/blob/master/packages/ove/src/AutoAnnotate.js
 
 # Implementing Autosave functionality
 
@@ -675,7 +675,7 @@ download the latest yarn
 
 ```
 IMPORTANT! First make sure you make an issue for whatever it is you'd like to see changed!
-fork your own branch of tg-oss from https://github.com/manulera/tg-oss
+fork your own branch of tg-oss from https://github.com/OpenCloning/tg-oss
 cd tg-oss
 yarn
 yarn nx run ove:start #this will start the demo app

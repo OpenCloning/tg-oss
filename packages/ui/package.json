@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./src/index.js",
   "type": "module",
-  "repository": "https://github.com/manulera/tg-oss",
+  "repository": "https://github.com/OpenCloning/tg-oss",
   "exports": {
     ".": {
       "import": "./index.es.js",

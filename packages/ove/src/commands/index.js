@@ -507,7 +507,7 @@ const editCommandDefs = {
           <div>
             <h5>Open Vector Editor Version: {packageJson.version}</h5>
             Issues can be logged here:{" "}
-            <a href="https://github.com/manulera/tg-oss/issues">
+            <a href="https://github.com/OpenCloning/tg-oss/issues">
               Open Vector Editor
             </a>
           </div>
@@ -521,7 +521,7 @@ const editCommandDefs = {
     name: "OVE Version:  " + packageJson.version,
     handler: () => {
       const win = window.open(
-        "https://github.com/manulera/tg-oss/commits/master/packages/ove",
+        "https://github.com/OpenCloning/tg-oss/commits/master/packages/ove",
         "_blank"
       );
       win.focus();

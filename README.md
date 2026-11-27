@@ -12,12 +12,12 @@ To migrate from the `@teselagen/*` packages, replace the scope in your dependenc
 
 **@opencloning/tg-oss-ove** (open-source vector editor - a tool for viewing and manipulating DNA/AA sequences)
 
-- DEMO: https://manulera.github.io/tg-oss/ove
+- DEMO: https://opencloning.github.io/tg-oss/ove
 - CODE: [packages/ove](./packages/ove)
 
 **@opencloning/tg-oss-ui** (reusable react components)
 
-- DEMO: https://manulera.github.io/tg-oss/ui
+- DEMO: https://opencloning.github.io/tg-oss/ui
 - CODE: [packages/ui](./packages/ui)
 
 **@opencloning/tg-oss-bio-parsers** (parsers and formatters for genbank/fasta/json/snapgene/geneious/jbei-xml)

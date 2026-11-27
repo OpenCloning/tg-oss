@@ -2,7 +2,7 @@
   "name": "@opencloning/tg-oss-file-utils",
   "version": "1.0.0",
   "type": "module",
-  "repository": "https://github.com/manulera/tg-oss",
+  "repository": "https://github.com/OpenCloning/tg-oss",
   "dependencies": {
     "jszip": "^3.10.1",
     "lodash-es": "^4.17.21",

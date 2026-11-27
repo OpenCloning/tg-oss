@@ -76,7 +76,7 @@ const DemoPage = ({ moduleName, demos, showComponentList }) => {
 
             <a
               style={{ fontSize: 16 }}
-              href={`https://github.com/manulera/tg-oss/tree/master/packages/${moduleName}`}
+              href={`https://github.com/OpenCloning/tg-oss/tree/master/packages/${moduleName}`}
             >
               @opencloning/tg-oss-{`${moduleName}`}
             </a>
