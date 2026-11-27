@@ -23,7 +23,7 @@
   display: none;
 }
 
-/* removing the display inline styling because they broke menu positioning: https://github.com/TeselaGen/lims/issues/2563 */
+/* removing the display inline styling because they broke menu positioning */
 /* .tg-menu-bar-popover .bp3-popover-wrapper {
   display: inline;
 }

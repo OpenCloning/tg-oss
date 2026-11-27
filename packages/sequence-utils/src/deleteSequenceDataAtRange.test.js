@@ -1,8 +1,8 @@
-//tnr: half finished test.
+// TODO: half finished test.
 
 import * as chai from "chai";
 
-import { getRangeLength } from "@teselagen/range-utils";
+import { getRangeLength } from "@opencloning/tg-oss-range-utils";
 import { cloneDeep } from "lodash-es";
 import chaiSubset from "chai-subset";
 

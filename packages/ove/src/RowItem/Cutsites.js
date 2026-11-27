@@ -1,10 +1,10 @@
-import { isPositionWithinRange } from "@teselagen/range-utils";
+import { isPositionWithinRange } from "@opencloning/tg-oss-range-utils";
 import assign from "lodash/assign";
 import React from "react";
 import areNonNegativeIntegers from "validate.io-nonnegative-integer-array";
-import { getOverlapsOfPotentiallyCircularRanges } from "@teselagen/range-utils";
+import { getOverlapsOfPotentiallyCircularRanges } from "@opencloning/tg-oss-range-utils";
 import getXStartAndWidthOfRangeWrtRow from "./getXStartAndWidthOfRangeWrtRow";
-import { pureNoFunc } from "@teselagen/ui";
+import { pureNoFunc } from "@opencloning/tg-oss-ui";
 import { connectToEditor } from "../withEditorProps";
 
 let snipStyle = {
@@ -67,7 +67,7 @@ function getSnipConnector(
   charWidth,
   index
 ) {
-  //tnr: we basically need to first determine what the range start and end are..
+  // TODO: we basically need to first determine what the range start and end are..
   // var _snipRange = {
   //     ...snipRange,
   //     end: norm(snipRange.end-1,sequenceLength)

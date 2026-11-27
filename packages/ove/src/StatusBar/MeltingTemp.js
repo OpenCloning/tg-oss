@@ -5,10 +5,10 @@ import {
   calculateTm,
   calculateNebTm,
   calculateSantaLuciaTm
-} from "@teselagen/sequence-utils";
+} from "@opencloning/tg-oss-sequence-utils";
 
 import { isNumber, isString } from "lodash-es";
-import { popoverOverflowModifiers } from "@teselagen/ui";
+import { popoverOverflowModifiers } from "@opencloning/tg-oss-ui";
 import useTmType from "../utils/useTmType";
 
 export default function MeltingTemp({
@@ -48,7 +48,7 @@ export default function MeltingTemp({
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://github.com/TeselaGen/tg-oss/blob/master/packages/sequence-utils/src/calculateNebTm.js"
+              href="https://github.com/OpenCloning/tg-oss/blob/master/packages/sequence-utils/src/calculateNebTm.js"
             >
               algorithms
             </a>

@@ -1,9 +1,9 @@
 {
-  "name": "@teselagen/ove",
-  "version": "0.8.42",
+  "name": "@opencloning/tg-oss-ove",
+  "version": "1.0.0",
   "main": "./src/index.js",
   "type": "module",
-  "repository": "https://github.com/TeselaGen/tg-oss",
+  "repository": "https://github.com/OpenCloning/tg-oss",
   "exports": {
     ".": {
       "import": "./index.es.js",
@@ -14,13 +14,13 @@
   "dependencies": {
     "@blueprintjs/core": "3.54.0",
     "@hello-pangea/dnd": "16.2.0",
+    "@opencloning/tg-oss-bio-parsers": "workspace:*",
+    "@opencloning/tg-oss-file-utils": "workspace:*",
+    "@opencloning/tg-oss-range-utils": "workspace:*",
+    "@opencloning/tg-oss-sequence-utils": "workspace:*",
+    "@opencloning/tg-oss-ui": "workspace:*",
     "@risingstack/react-easy-state": "^6.3.0",
-    "@teselagen/bio-parsers": "file:../bio-parsers",
-    "@teselagen/file-utils": "file:../file-utils",
-    "@teselagen/range-utils": "file:../range-utils",
     "@teselagen/react-list": "0.8.18",
-    "@teselagen/sequence-utils": "file:../sequence-utils",
-    "@teselagen/ui": "file:../ui",
     "@use-gesture/react": "10.3.0",
     "classnames": "^2.3.2",
     "clipboard": "^2.0.11",

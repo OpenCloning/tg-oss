@@ -157,7 +157,7 @@ describe("find tool", function () {
     cy.contains("3999 to 4007");
   });
 
-  //tnr: this doesn't work in cypress on linux rn
+  // TODO: this doesn't work in cypress on linux rn
   it.skip(`cmd+f should open find tool if it is closed 
   cmd+f should refocus find tool if it is already open and unfocused
   cmd+f should do nothing if find tool is already open and focused

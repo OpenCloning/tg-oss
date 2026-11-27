@@ -95,9 +95,9 @@ export default ({ demos, isOpen, setIsOpen }) => {
         })}
       <br></br>
       <br></br>
-      Teselagen Open Source UI Library Demo
+      Open Source UI Library Demo
       <a
-        href="https://teselagen.github.io/tg-oss/ui/"
+        href="https://opencloning.github.io/tg-oss/ui/"
         style={{ fontSize: 16 }}
         rel="noreferrer"
         target="_blank"
@@ -105,9 +105,9 @@ export default ({ demos, isOpen, setIsOpen }) => {
         tg-oss/ui demo page
       </a>
       <br></br>
-      Teselagen Open Vector Editor - OVE - (Vector/Plasmid Editor) Demo
+      Open Vector Editor - OVE - (Vector/Plasmid Editor) Demo
       <a
-        href="https://teselagen.github.io/tg-oss/ove/"
+        href="https://opencloning.github.io/tg-oss/ove/"
         style={{ fontSize: 16 }}
         rel="noreferrer"
         target="_blank"

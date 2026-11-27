@@ -3,15 +3,15 @@ import { Tag, Classes, NumericInput, Slider } from "@blueprintjs/core";
 import {
   convertRangeTo0Based,
   getSequenceWithinRange
-} from "@teselagen/range-utils";
+} from "@opencloning/tg-oss-range-utils";
 import classnames from "classnames";
 import pluralize from "pluralize";
-import { showConfirmationDialog } from "@teselagen/ui";
+import { showConfirmationDialog } from "@opencloning/tg-oss-ui";
 import {
   adjustBpsToReplaceOrInsert,
   annotationTypes,
   getSequenceDataBetweenRange
-} from "@teselagen/sequence-utils";
+} from "@opencloning/tg-oss-sequence-utils";
 import { oveCommandFactory } from "../utils/commandUtils";
 import {
   upperFirst,
@@ -284,7 +284,10 @@ const fileCommandDefs = {
   },
   exportSequenceAsTeselagenJson: {
     name: "Download Teselagen JSON File",
-    handler: props => props.exportSequenceToFile("teselagenJson", { getAcceptedInsertChars: props.getAcceptedInsertChars})
+    handler: props =>
+      props.exportSequenceToFile("teselagenJson", {
+        getAcceptedInsertChars: props.getAcceptedInsertChars
+      })
   },
 
   viewProperties: {
@@ -503,11 +506,8 @@ const editCommandDefs = {
         text: (
           <div>
             <h5>Open Vector Editor Version: {packageJson.version}</h5>
-            This editor is made by Teselagen.
-            <br />
-            <br />
             Issues can be logged here:{" "}
-            <a href="https://github.com/TeselaGen/openVectorEditor/issues">
+            <a href="https://github.com/OpenCloning/tg-oss/issues">
               Open Vector Editor
             </a>
           </div>
@@ -521,7 +521,7 @@ const editCommandDefs = {
     name: "OVE Version:  " + packageJson.version,
     handler: () => {
       const win = window.open(
-        "https://github.com/TeselaGen/openVectorEditor/commits/master",
+        "https://github.com/OpenCloning/tg-oss/commits/master/packages/ove",
         "_blank"
       );
       win.focus();
@@ -622,7 +622,7 @@ const editCommandDefs = {
     },
     isDisabled: props => props.sequenceLength === 0,
     hotkey: "mod+a"
-    //tnr: we can't pass the following because it will block inputs
+    // TODO: we can't pass the following because it will block inputs
     // hotkeyProps: { preventDefault: true, stopPropagation: true }
   },
 
@@ -1475,7 +1475,7 @@ function getFilterByLengthCmd(type) {
               }}
               value={props[`${type}LengthsToHide`].min}
               min={0}
-              // max={props[`${type}LengthsToHide`].max} //tnr: I think it is better to not bound the max
+              // max={props[`${type}LengthsToHide`].max} // TODO: I think it is better to not bound the max
               fill={true}
               clampValueOnBlur={true}
               data-test={`min-${type}-length`}
@@ -1484,7 +1484,7 @@ function getFilterByLengthCmd(type) {
               onValueChange={function (valueAsNumber) {
                 const maximumFilterLength = parseInt(valueAsNumber, 10);
                 if (!(maximumFilterLength > -1)) return;
-                // if (maximumFilterLength > props.sequenceLength) return; //tnr: I think it is better not to bound the max
+                // if (maximumFilterLength > props.sequenceLength) return; // TODO: I think it is better not to bound the max
                 props[`update${startCase(type)}LengthsToHide`]({
                   enabled: true,
                   max: maximumFilterLength
@@ -1492,7 +1492,7 @@ function getFilterByLengthCmd(type) {
               }}
               value={props[`${type}LengthsToHide`].max}
               min={0}
-              // max={props.sequenceLength} //tnr: I think it is better to not bound the max
+              // max={props.sequenceLength} // TODO: I think it is better to not bound the max
               fill={true}
               clampValueOnBlur={true}
               data-test={`max-${type}-length`}

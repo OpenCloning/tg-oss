@@ -182,7 +182,7 @@ function PointedAnnotation(props) {
   if (charWidth < 15) {
     //allow the arrow width to adapt
     if (width > 15) {
-      charWN = 15; //tnr: replace 15 here with a non-hardcoded number..
+      charWN = 15; // TODO: replace 15 here with a non-hardcoded number..
     } else {
       charWN = width;
     }

@@ -131,7 +131,7 @@
   border: var(--cell-border-width) solid rgba(212, 212, 212, 0);
 }
 
-/* tgreen: we don't want the border for rows that don't have any data */
+/* TODO: we don't want the border for rows that don't have any data */
 .ReactTable.ReactTable .rt-tbody .rt-tr-group.no-row-data {
   min-height: 0px;
   border-bottom: none;
@@ -310,7 +310,7 @@ body:not(.drag-active)
   background: #ebf1f5;
   z-index: 2;
 }
-/* tnr: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed */
+/* TODO: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed */
 .in_cypress_test .ReactTable .rt-thead {
   position: unset;
 }

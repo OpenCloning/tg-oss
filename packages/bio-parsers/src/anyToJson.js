@@ -6,7 +6,7 @@ import snapgeneToJson from "./snapgeneToJson";
 import ab1ToJson from "./ab1ToJson";
 import gffToJson from "./gffToJson";
 import isBrowser from "./utils/isBrowser";
-import { tidyUpSequenceData } from "@teselagen/sequence-utils";
+import { tidyUpSequenceData } from "@opencloning/tg-oss-sequence-utils";
 import geneiousXmlToJson from "./geneiousXmlToJson";
 import jbeiXmlToJson from "./jbeiXmlToJson";
 import { unzipSync } from "fflate";
@@ -15,7 +15,7 @@ import fastqToJson from "./fastqToJson";
  * takes in file content string and its file name and determines what parser it needs to be sent to.
  * The file is parsed to our old JSON schema and after it goes through an intermediate step where we convert that json to our new schema
  * @param  {string} fileContentString content of the file as a string
- * @param  {Function} onFileParsed    //tnr: fill this out
+ * @param  {Function} onFileParsed    // TODO: fill this out
  */
 
 async function anyToJson(fileContentStringOrFileObj, options) {
@@ -119,7 +119,7 @@ async function anyToJson(fileContentStringOrFileObj, options) {
     return gffToJson(fileContentStringOrFileObj, options);
   } else {
     // console.warn(
-    //   "TNR: No filename passed to anyToJson so we're going through the list of parsers. Make sure you're passing the filename when using anyToJson!"
+    //   "No filename passed to anyToJson so we're going through the list of parsers. Make sure you're passing the filename when using anyToJson!"
     // );
     let parsersToTry = [
       {

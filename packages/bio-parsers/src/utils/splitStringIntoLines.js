@@ -6,7 +6,7 @@ export default function splitStringIntoLines(string) {
     lines = string.split(/\r?\n/);
     // eslint-disable-next-line eqeqeq
     if (lines.length == 1) {
-      //tnr: not sure why this check is being made... but keeping it in because it is probably doing something
+      // TODO: not sure why this check is being made... but keeping it in because it is probably doing something
       lines = string.split("\\n");
     }
     return lines;

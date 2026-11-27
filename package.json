@@ -1,17 +1,15 @@
 {
-  "name": "@teselagen/source",
+  "name": "@opencloning/source",
   "version": "0.2.0",
   "license": "MIT",
   "scripts": {
-    "postinstall": "patch-package",
-    "prepare": "husky",
+    "postinstall": "patch-package && husky",
     "e2e": "nx affected --base=master --head=HEAD -t e2e",
     "test": "nx affected -t test"
   },
   "type": "module",
-  "repository": "https://github.com/TeselaGen/tg-oss",
+  "repository": "https://github.com/OpenCloning/tg-oss",
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@nx/cypress": "20.4.6",
     "@nx/eslint-plugin": "20.4.6",
@@ -68,7 +66,7 @@
     "packages/*"
   ],
   "volta": {
-    "node": "18.18.0",
-    "yarn": "1.22.21"
-  }
+    "node": "18.18.0"
+  },
+  "packageManager": "yarn@4.19.0"
 }

@@ -11,7 +11,7 @@ export default function findOrfsInPlasmid(
     // we do not find ORFs in protein/oligo sequences
     return [];
   }
-  //tnr, we should do the parsing down of the orfs immediately after they're returned from this sequence
+  // TODO: we should do the parsing down of the orfs immediately after they're returned from this sequence
   // const orfs1Forward = eliminateCircularOrfsThatOverlapWithNonCircularOrfs(getOrfsFromSequence(0, doubleForwardSequence, minimumOrfSize, true), maxLength);
   const forwardOrfs = getOrfsFromSequence({
     sequence: sequence,

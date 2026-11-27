@@ -5,6 +5,7 @@ jobs:
     name: Cypress run
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         # the actual items in the array do not matter,
         # just the number - to force CI to sping 3 copies
@@ -19,6 +20,8 @@ jobs:
         with:
           # We need to fetch all branches and commits so that Nx affected has a base to compare against.
           fetch-depth: 0
+      - name: Enable corepack (Yarn 4)
+        run: npm install -g corepack@latest && corepack enable
       - name: Install dependencies
         uses: cypress-io/github-action@v6
         with:

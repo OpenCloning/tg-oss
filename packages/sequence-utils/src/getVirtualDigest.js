@@ -5,7 +5,7 @@ import { get } from "lodash-es";
 import {
   normalizePositionByRangeLength,
   getRangeLength
-} from "@teselagen/range-utils";
+} from "@opencloning/tg-oss-range-utils";
 
 export default function getVirtualDigest({
   cutsites,
@@ -26,7 +26,7 @@ export default function getVirtualDigest({
   sortedCutsites.forEach((cutsite1, index) => {
     if (computePartialDigest && !computePartialDigestDisabled) {
       sortedCutsites.forEach((cs, index2) => {
-        // if (index2 === index + 1 || index2 === 0) { //tnw: not sure if this is necessary or not. commenting out for now
+        // if (index2 === index + 1 || index2 === 0) { // TODO: not sure if this is necessary or not. commenting out for now
         //   return;
         // }
         pairs.push([cutsite1, sortedCutsites[index2]]);

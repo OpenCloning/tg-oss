@@ -86,7 +86,7 @@ function abConverter(inputArrayBuffer) {
     traceData.baseCalls = this.getDataTag(tagDict.baseCalls2);
     traceData.qualNums = this.getDataTag(tagDict.qualNums);
     if (traceData.qualNums) {
-      //tnr if we're only getting 1's and 0's as qualNums, that means that there weren't actual qual nums attached to the file
+      // TODO: if we're only getting 1's and 0's as qualNums, that means that there weren't actual qual nums attached to the file
       if (!traceData.qualNums.filter(q => q !== 1 && q !== 0).length) {
         delete traceData.qualNums;
       }
@@ -121,7 +121,7 @@ const tagDict = {
   colorDataC: { tagName: "DATA", tagNum: 12, typeToReturn: "getShort" }
 };
 
-// tnr: this function takes in chromData which has 4 traces and a basePos (which describes where in the trace the base call lands)
+// TODO: this function takes in chromData which has 4 traces and a basePos (which describes where in the trace the base call lands)
 // It "normalizes" that data into a baseTraces array so that each base has its own set of that data (having a per-base trace makes insertion/deletion/copy/paste actions all easier)
 function convertBasePosTraceToPerBpTrace(chromData) {
   const { basePos } = chromData;

@@ -51,3 +51,12 @@ playwright/.cache
 downloads
 .vite
 .nx
+
+# Yarn 4 (same entries as OpenCloning/js)
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

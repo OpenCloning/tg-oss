@@ -210,7 +210,7 @@ const proteinAlphabet = {
     mass: 0
   },
   ".": {
-    //tnr: this is actually a deletion/gap character (previously we had this as a stop character which is incorrect) https://www.dnabaser.com/articles/IUPAC%20ambiguity%20codes.html
+    // TODO: this is actually a deletion/gap character (previously we had this as a stop character which is incorrect) https://www.dnabaser.com/articles/IUPAC%20ambiguity%20codes.html
     value: ".",
     name: "Gap",
     threeLettersName: "Gap",

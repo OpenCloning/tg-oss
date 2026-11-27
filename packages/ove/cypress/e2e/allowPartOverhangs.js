@@ -3,7 +3,7 @@ describe("allowPartOverhangs", function () {
     cy.visit("/#/Editor?allowPartOverhangs=true");
     cy.get(".veCircularViewPart:contains(Diges..)").click();
     cy.get(".partWithOverhangsIndicator");
-    //tnr: add additional checks here for the actual rendering..
+    // TODO: add additional checks here for the actual rendering..
     // cy.get(`[data-partoverhang="cgcg"]`);
   });
 });

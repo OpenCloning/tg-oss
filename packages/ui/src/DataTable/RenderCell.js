@@ -141,7 +141,7 @@ export const RenderCell = ({
         className="tg-cell-wrapper"
         data-copy-text={text}
         data-copy-json={JSON.stringify(
-          //tnw: eventually we'll parse these back out and use either the fullValue (for the generic selects) or the regular text vals for everything else
+          // TODO: eventually we'll parse these back out and use either the fullValue (for the generic selects) or the regular text vals for everything else
           column.type === "genericSelect"
             ? {
                 __strVal: fullValue,

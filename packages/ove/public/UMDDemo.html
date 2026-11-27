@@ -3,19 +3,19 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://unpkg.com/@teselagen/ove/style.css"
+      href="https://unpkg.com/@opencloning/tg-oss-ove/style.css"
     />
   </head>
   <body style="display: flex">
     <a id="backButton"> Back </a> &nbsp;
     <script
       type="text/javascript"
-      src="https://unpkg.com/@teselagen/ove/index.umd.js"
+      src="https://unpkg.com/@opencloning/tg-oss-ove/index.umd.js"
     ></script>
     <script type="text/javascript">
       const hrefToUse = window.location.href.includes("localhost")
         ? `${window.location.origin}/#/Editor`
-        : "https://teselagen.github.io/tg-oss/ove-demo/";
+        : "https://opencloning.github.io/tg-oss/ove-demo/";
 
       document.getElementById("backButton").setAttribute("href", hrefToUse);
       const editor = window.createVectorEditor("createDomNodeForMe", {

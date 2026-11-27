@@ -1,7 +1,7 @@
 import React from "react";
 import IntervalTree from "node-interval-tree";
 import { sortBy, noop } from "lodash-es";
-import { getRangeLength } from "@teselagen/range-utils";
+import { getRangeLength } from "@opencloning/tg-oss-range-utils";
 import getRangeAngles from "./getRangeAnglesSpecial";
 import getYOffset from "./getYOffset";
 import withHover from "../helperComponents/withHover";
@@ -210,7 +210,7 @@ function drawAnnotations(props) {
           ellipsizedName = getEllipsizedName(totalAngle);
         }
 
-        // //tnr: WIP to try to adjust the inline label in the circular view to always show up even when zoomed in
+        // // TODO: WIP to try to adjust the inline label in the circular view to always show up even when zoomed in
         // if (ellipsizedName && isZoomedIn) {
         //   const nameAngle =
         //     ((ellipsizedName.length + 3) * 55) /

@@ -16,7 +16,7 @@ export * from "./diffUtils";
 export * from "./annotationTypes";
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
-//tnr: these are deprecated exports and should no longer be used!
+// TODO: these are deprecated exports and should no longer be used!
 const FeatureTypes = getFeatureTypes();
 const featureColors = getFeatureToColorMap();
 export {

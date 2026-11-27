@@ -1,6 +1,4 @@
-[![openVectorEditor](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/mp89gp/&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/mp89gp/runs)
-
-Congrats, you've made it to the repo for Teselagen's Open Source Vector Editor Component
+Congrats, you've made it to the repo for the Open Source Vector Editor Component
 
 - Built With React & Redux
 - Built for easy extensibility + embed-ibility
@@ -10,16 +8,10 @@ Congrats, you've made it to the repo for Teselagen's Open Source Vector Editor C
 
 ## [CHANGELOG](CHANGELOG.md)
 
-## Demo: https://teselagen.github.io/tg-oss/ove/#/Editor
-
-## Get the desktop app: https://github.com/teselagen/ove-electron#installation-instructions
-
-## Cypress Tests Dashboard: https://dashboard.cypress.io/#/projects/1zj5vc/runs (you'll need to make a login with cypress)
+## Demo: https://opencloning.github.io/tg-oss/ove/#/Editor
 
 ## OVE out in the wild (Who's using OVE):
 
-- Teselagen - https://teselagen.com/ (Combinatorial DNA design + Lab management + Ordering + Biohub)
-- ove-electron - https://github.com/teselagen/ove-electron (Simple desktop plasmid editor a la ApE)
 - JBEI - https://bioparts.org/ (Auto annotation and blast tool)
 - JBEI - https://public-registry.jbei.org/ (Lab management and design)
 - Labii - https://docs.labii.com/widgets/section-widgets/biology/molecular-biology-suite/open-vector-editor (All-in-One Configurable Platform for Scientific Data Management)
@@ -31,9 +23,7 @@ Congrats, you've made it to the repo for Teselagen's Open Source Vector Editor C
 <!-- TOC -->
 
 - [[CHANGELOG](CHANGELOG.md)](#changelogchangelogmd)
-- [Demo: https://teselagen.github.io/tg-oss/ove/#/Editor](#demo-httpsteselagengithubiotg-ossoveeditor)
-- [Get the desktop app: https://github.com/teselagen/ove-electron#installation-instructions](#get-the-desktop-app-httpsgithubcomteselagenove-electroninstallation-instructions)
-- [Cypress Tests Dashboard: https://dashboard.cypress.io/#/projects/1zj5vc/runs (you'll need to make a login with cypress)](#cypress-tests-dashboard-httpsdashboardcypressioprojects1zj5vcruns-youll-need-to-make-a-login-with-cypress)
+- [Demo: https://opencloning.github.io/tg-oss/ove/#/Editor](#demo-httpsopencloninggithubiotg-ossoveeditor)
 - [OVE out in the wild (Who's using OVE):](#ove-out-in-the-wild-whos-using-ove)
 - [Table of Contents](#table-of-contents)
 - [Upgrade Instructions for Major and Minor Versions](#upgrade-instructions-for-major-and-minor-versions)
@@ -51,7 +41,7 @@ Congrats, you've made it to the repo for Teselagen's Open Source Vector Editor C
     - [Full Example:](#full-example)
   - [Code (Universal)](#code-universal)
     - [Accessing the editor state:](#accessing-the-editor-state)
-  - [Demo (Universal): https://teselagen.github.io/tg-oss/ove/](#demo-universal-httpsteselagengithubiotg-ossove)
+  - [Demo (Universal): https://opencloning.github.io/tg-oss/ove/](#demo-universal-httpsopencloninggithubiotg-ossove)
 - [editorProps](#editorprops)
 - [editorState](#editorstate)
 - [Setting Local Storage Persisted Values](#setting-local-storage-persisted-values)
@@ -86,7 +76,7 @@ Congrats, you've made it to the repo for Teselagen's Open Source Vector Editor C
 This repo follows semantic versioning (major/minor/patche)
 
 The commit log can be seen here:
-https://github.com/TeselaGen/tg-oss/commits/master/packages/ove
+https://github.com/OpenCloning/tg-oss/commits/master/packages/ove
 
 Upgrade instructions for any major or minor change can be found here:
 [Upgrade instructions](UPGRADE_INSTRUCTIONS.md)
@@ -95,19 +85,12 @@ Upgrade instructions for any major or minor change can be found here:
 
 ## Example repo with OVE
 
-Here is where you can see how to run the `<Editor/>` in a Create-React-App environment: https://github.com/tnrich/ove-react-demo-repo
-
-If you clone that repo you can see it working and see how to set up the redux store/provider and initialize the editor. You should just clone it and run:
-
-```
-yarn
-yarn start
-```
+The [example-demos](../../example-demos) folder of this repo shows how to run the `<Editor/>` in a React app, set up the redux store/provider and initialize the editor, with [Vite](../../example-demos/oveViteDemo) or [webpack](../../example-demos/oveWebpackDemo).
 
 ## Installation (react)
 
 ```
-yarn add @teselagen/ove react react-dom
+yarn add @opencloning/tg-oss-ove react react-dom
 ```
 
 ## Code (react)
@@ -115,13 +98,13 @@ yarn add @teselagen/ove react react-dom
 Require the following components like:
 
 ```
-import {Editor, RowView} from "@teselagen/ove"
+import {Editor, RowView} from "@opencloning/tg-oss-ove"
 ```
 
 ### Editor
 
 To use the `<Editor>` component, you'll need to do a bit more work to set up a redux store.
-You can see an example repo where this works here: https://github.com/tnrich/ove-react-demo-repo
+You can see examples where this works in the [example-demos](../../example-demos) folder.
 
 The `<Editor {...editorProps}/>` component gives you a full blown editor.
 It takes in a list of editorProps as detailed below.
@@ -171,27 +154,27 @@ The universal build can be used in any app with or without react. It corresponds
 ### via npm:
 
 ```
-npm install @teselagen/ove
+npm install @opencloning/tg-oss-ove
 ```
 
 then add the links
 
 ```html
-<link rel="stylesheet" type="text/css" href="your-path-to-node-modules/@teselagen/ove/umd/style.css" />
-<script type="text/javascript" src="your-path-to-node-modules/@teselagen/ove/index.umd.js"></script>
+<link rel="stylesheet" type="text/css" href="your-path-to-node-modules/@opencloning/tg-oss-ove/umd/style.css" />
+<script type="text/javascript" src="your-path-to-node-modules/@opencloning/tg-oss-ove/index.umd.js"></script>
 ```
 
 ### Or via CDN:
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/@teselagen/ove/style.css" />
-<script type="text/javascript" src="https://unpkg.com/@teselagen/ove/index.umd.js"></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@opencloning/tg-oss-ove/style.css" />
+<script type="text/javascript" src="https://unpkg.com/@opencloning/tg-oss-ove/index.umd.js"></script>
 ```
 
 ### Full Example:
 
-A full example of how to set up the unpkg/UMD demo can be seen here: https://github.com/TeselaGen/tg-oss/blob/master/packages/ove/public/UMDDemo.html
-Demo here https://teselagen.github.io/tg-oss/ove/UMDDemo.html
+A full example of how to set up the unpkg/UMD demo can be seen here: https://github.com/OpenCloning/tg-oss/blob/master/packages/ove/public/UMDDemo.html
+Demo here https://opencloning.github.io/tg-oss/ove/UMDDemo.html
 
 ## Code (Universal)
 
@@ -210,7 +193,7 @@ const currentEditorState = editor.getState();
 console.info(currentEditorState.selectionLayer);
 ```
 
-## Demo (Universal): https://teselagen.github.io/tg-oss/ove/
+## Demo (Universal): https://opencloning.github.io/tg-oss/ove/
 
 # editorProps
 
@@ -330,7 +313,7 @@ These props consist of hooks and editor config options that can be passed like s
   		showReadOnly: true,
 			showAvailability: false
 		},
-		onDigestSave: () => {} //tnr: NOT YET IMPLEMENTED
+		onDigestSave: () => {} // TODO: NOT YET IMPLEMENTED
 }
 ```
 
@@ -434,7 +417,7 @@ They look like this:
 # Protein Editor
 
 OVE can be set up to view and edit proteins (Amino Acid sequences) as first class citizens.
-The protein editor can be seen here: https://teselagen.github.io/tg-oss/ove/#/Editor?moleculeType=Protein
+The protein editor can be seen here: https://opencloning.github.io/tg-oss/ove/#/Editor?moleculeType=Protein
 
 The editor supports Amino Acid sequences as well as DNA sequences!
 Protein sequence mode is enabled by calling updateEditor with a protein sequenceData object:
@@ -460,7 +443,7 @@ the protein sequenceData object should look like so
 	proteinSequence: "mmhlrlfcillaavs...etc"
 	sequence: "gtagagagagcca...etc" //optional!
 	//if features or parts are provided to the editor, it is assumed that they will indexed to the underlying DNA sequence (0-based inclusive) , not to the AA indices .
-	//You can use the helper util from @teselagen/sequence-utils tidyUpSequenceData to convertAnnotationsFromAAIndices if your protein data has
+	//You can use the helper util from @opencloning/tg-oss-sequence-utils tidyUpSequenceData to convertAnnotationsFromAAIndices if your protein data has
 	//features/parts coming in as AA-indexed
 	features: [{name: "testFeature1",
 		start: 3, //start on AA 1
@@ -675,7 +658,7 @@ window.createVectorEditor({
 
 ## Auto annotate addon:
 
-https://github.com/TeselaGen/tg-oss/blob/master/packages/ove/src/AutoAnnotate.js
+https://github.com/OpenCloning/tg-oss/blob/master/packages/ove/src/AutoAnnotate.js
 
 # Implementing Autosave functionality
 
@@ -692,7 +675,7 @@ download the latest yarn
 
 ```
 IMPORTANT! First make sure you make an issue for whatever it is you'd like to see changed!
-fork your own branch of tg-oss from https://github.com/TeselaGen/tg-oss
+fork your own branch of tg-oss from https://github.com/OpenCloning/tg-oss
 cd tg-oss
 yarn
 yarn nx run ove:start #this will start the demo app
@@ -711,7 +694,7 @@ yarn nx run ove:launch-e2e #this will run the cypress tests
 you can view existing cypress tests in the packages/ove/cypress/e2e folder
 you can either add your test to an existing cypress file or make a new test file
 
-once you're satisfied, make a pull request back to tg-oss and mention @tnrich
+once you're satisfied, make a pull request back to tg-oss
 
 ## Running unit tests
 

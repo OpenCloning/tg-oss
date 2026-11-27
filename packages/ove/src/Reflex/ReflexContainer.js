@@ -576,7 +576,7 @@ class ReflexContainer extends React.Component {
     const size = this.getSize(child);
 
     const newSize = Math.max(
-      // child.props.minSize, //tnr: not sure what to do about this.. I had to comment this out to make the collapsing work
+      // child.props.minSize, // TODO: not sure what to do about this.. I had to comment this out to make the collapsing work
       size - Math.abs(offset)
     );
 
@@ -762,7 +762,7 @@ class ReflexContainer extends React.Component {
           orientation: this.props.orientation,
           minSize: child.props.minSize || 1,
           events: this.events,
-          flex: round(flexData.flex, 5), //tnr: this rounding is necessary because flex was getting computed very slightly off (eg -1.423432e-17). This corrects for that
+          flex: round(flexData.flex, 5), // TODO: this rounding is necessary because flex was getting computed very slightly off (eg -1.423432e-17). This corrects for that
           ref: flexData.guid,
           index: idx
         });

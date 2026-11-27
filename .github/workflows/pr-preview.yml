@@ -22,9 +22,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Enable corepack (Yarn 4)
+        run: npm install -g corepack@latest && corepack enable
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
         env:
           CYPRESS_INSTALL_BINARY: 0
 

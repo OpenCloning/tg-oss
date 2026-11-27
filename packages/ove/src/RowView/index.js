@@ -244,7 +244,7 @@ class _RowView extends React.Component {
           this.InfiniteScroller &&
             this.InfiniteScroller.scrollTo(rowToScrollTo);
         }, 0);
-        clearInterval(this.jumpIntervalId); //tnr this was triggering a nasty error in cypress related to sinon -
+        clearInterval(this.jumpIntervalId); // TODO: this was triggering a nasty error in cypress related to sinon -
         //this will try to run the following logic at most 10 times with a 100ms pause between each
         this.jumpIntervalId = setIntervalX(
           () => {
@@ -271,12 +271,12 @@ class _RowView extends React.Component {
                 console.error();
               }
             }
-            //tnr: we can't use the following because it messes up the scroll of the Reflex panels
+            // TODO: we can't use the following because it messes up the scroll of the Reflex panels
             //causing the tabs to not be shown
             // el.scrollIntoView && el.scrollIntoView();
           },
           100,
-          10 //tnr: we could run this more than 5 times.. doesn't really matter
+          10 // TODO: we could run this more than 5 times.. doesn't really matter
         );
       }
     }

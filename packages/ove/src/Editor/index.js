@@ -1,5 +1,5 @@
 import { debounce, find, get, some, isArray } from "lodash-es";
-import { showContextMenu } from "@teselagen/ui";
+import { showContextMenu } from "@opencloning/tg-oss-ui";
 import {
   Button,
   ButtonGroup,
@@ -19,10 +19,10 @@ import "../Reflex/reflex-styles.css";
 
 import React from "react";
 import AlignmentView from "../AlignmentView";
-// import * as customIcons from "@teselagen/ui";
+// import * as customIcons from "@opencloning/tg-oss-ui";
 // import { Button } from "@blueprintjs/core";
 import { compose } from "redux";
-//tnr: this can be removed once https://github.com/leefsmp/Re-Flex/pull/30 is merged and deployed
+// TODO: this can be removed once https://github.com/leefsmp/Re-Flex/pull/30 is merged and deployed
 /* eslint-disable */
 import { connectToEditor, handleSave } from "../withEditorProps";
 import { withHandlers } from "recompose";
@@ -431,7 +431,7 @@ export class Editor extends React.Component {
       }
     };
     try {
-      //tnr: fixes https://github.com/TeselaGen/openVectorEditor/issues/689
+      // TODO: fixes https://github.com/TeselaGen/openVectorEditor/issues/689
       if (previewModeFullscreen) {
         window.document.body.classList.add("tg-no-scroll-body");
       } else {

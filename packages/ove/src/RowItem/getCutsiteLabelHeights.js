@@ -1,4 +1,4 @@
-//tnr: not actually used yet. I don't think it is necessary
+// TODO: not actually used yet. I don't think it is necessary
 // for the cutsite label heights to be perfect
 
 import getXStartAndWidthOfRowAnnotation from "./getXStartAndWidthOfRowAnnotation";

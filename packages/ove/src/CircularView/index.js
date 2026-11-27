@@ -18,7 +18,7 @@ import {
   getMiddleOfRange,
   getSequenceWithinRange,
   trimRangeByAnotherRange
-} from "@teselagen/range-utils";
+} from "@opencloning/tg-oss-range-utils";
 import React, { useEffect, useRef, useState } from "react";
 import Draggable from "react-draggable";
 import withEditorInteractions from "../withEditorInteractions";
@@ -565,7 +565,7 @@ export function CircularView(props) {
       if (results) {
         // //update the radius, labels, and svg
         radius += results.height || 0;
-        //tnr: we had been storing labels as a keyed-by-id object but that caused parts and features with the same id to override eachother
+        // TODO: we had been storing labels as a keyed-by-id object but that caused parts and features with the same id to override eachother
         labels = [...map(labels), ...map(results.labels || {})];
         comp = results.component === undefined ? results : results.component;
       }
@@ -651,7 +651,7 @@ export function CircularView(props) {
     }
   }
 
-  //tnr: Make the radius have a minimum so the empty yellow axis circle doesn't take up the entire screen
+  // TODO: Make the radius have a minimum so the empty yellow axis circle doesn't take up the entire screen
   if (radius < 150) radius = 150;
   const widthToUse = Math.max(Number(width) || 300);
   const heightToUse = Math.max(Number(height) || 300);

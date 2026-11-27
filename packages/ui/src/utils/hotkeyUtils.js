@@ -92,7 +92,7 @@ export const withHotkeys = (hotkeys, handlers) => {
       onKeyDown: handleKeyDown,
       onKeyUp: handleKeyUp
     };
-    return children ? ( //tnr: if children are passed, we'll clone them with the new props
+    return children ? ( // TODO: if children are passed, we'll clone them with the new props
       React.cloneElement(children, newProps)
     ) : (
       //if not, then we'll return a div that can be used

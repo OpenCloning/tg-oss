@@ -2,10 +2,10 @@ import React from "react";
 import {
   getFeatureToColorMap,
   getFeatureTypes
-} from "@teselagen/sequence-utils";
+} from "@opencloning/tg-oss-sequence-utils";
 
 import AddOrEditAnnotationDialog from "../AddOrEditAnnotationDialog";
-import { ReactSelectField } from "@teselagen/ui";
+import { ReactSelectField } from "@opencloning/tg-oss-ui";
 
 const RenderTypes = ({ readOnly, type }) => (
   <ReactSelectField
@@ -52,7 +52,7 @@ export default AddOrEditAnnotationDialog({
   },
   getProps: props => ({
     upsertAnnotation: props.upsertFeature,
-    // renderLocations: true, //tnw enable this eventually for proteins
+    // renderLocations: true, // TODO: enable this eventually for proteins
     renderLocations: !props.sequenceData.isProtein,
     RenderTypes,
     annotationTypePlural: "features"

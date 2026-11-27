@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
 import { resolve, join, basename } from "path";
 
 // Get the project root from command line args
@@ -32,39 +32,40 @@ try {
   const pkg = JSON.parse(readFileSync(builtPackageJsonPath, "utf-8"));
   let hasChanges = false;
 
+  // Versions of the workspace packages, by package name
+  const packagesDir = resolve(workspaceRoot, "packages");
+  const workspaceVersions = {};
+  for (const dir of readdirSync(packagesDir)) {
+    const wsPkgPath = join(packagesDir, dir, "package.json");
+    if (existsSync(wsPkgPath)) {
+      const wsPkg = JSON.parse(readFileSync(wsPkgPath, "utf-8"));
+      workspaceVersions[wsPkg.name] = wsPkg.version;
+    }
+  }
+
+  // Replace "workspace:" ranges with real versions, the same way `yarn npm publish`
+  // would: "workspace:*" -> "1.2.3", "workspace:^" -> "^1.2.3", "workspace:~" -> "~1.2.3".
+  // We publish from dist/ with `npm publish`, which does not do this itself.
   const updateDeps = deps => {
     if (!deps) return;
 
     for (const [name, version] of Object.entries(deps)) {
-      if (version.startsWith("file:")) {
-        const relativePath = version.replace("file:", "");
-        // Resolve the actual path of the dependency relative to the *source* project root
-        // projectRoot is like 'packages/sequence-utils'
-        // relativePath is like '../range-utils'
-        // resolved path should be 'packages/range-utils'
-        const sourceDependencyPath = resolve(
-          workspaceRoot,
-          projectRoot,
-          relativePath
-        );
-        const sourceDependencyPkgPath = join(
-          sourceDependencyPath,
-          "package.json"
-        );
+      if (!version.startsWith("workspace:")) continue;
 
-        if (existsSync(sourceDependencyPkgPath)) {
-          const depPkg = JSON.parse(
-            readFileSync(sourceDependencyPkgPath, "utf-8")
-          );
-          console.info(`Updating ${name} from ${version} to ${depPkg.version}`);
-          deps[name] = depPkg.version;
-          hasChanges = true;
-        } else {
-          console.warn(
-            `Warning: Could not find package.json for dependency ${name} at ${sourceDependencyPkgPath}`
-          );
-        }
+      const range = version.slice("workspace:".length);
+      const depVersion = workspaceVersions[name];
+      if (!depVersion) {
+        throw new Error(`${name} (${version}) is not a workspace package`);
       }
+
+      let newVersion;
+      if (range === "*") newVersion = depVersion;
+      else if (range === "^" || range === "~") newVersion = range + depVersion;
+      else newVersion = range;
+
+      console.info(`Updating ${name} from ${version} to ${newVersion}`);
+      deps[name] = newVersion;
+      hasChanges = true;
     }
   };
 
@@ -80,7 +81,7 @@ try {
     );
   } else {
     console.info(
-      `No 'file:' dependencies found to update in ${builtPackageJsonPath}`
+      `No 'workspace:' dependencies found to update in ${builtPackageJsonPath}`
     );
   }
 } catch (err) {

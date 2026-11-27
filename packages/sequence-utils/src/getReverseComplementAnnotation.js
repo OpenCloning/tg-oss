@@ -3,7 +3,7 @@ export default function getReverseComplementAnnotation(
   sequenceLength
 ) {
   //note this function assumes that the entire sequence (or subsequence) is being reverse complemented
-  //TNR: this is what is happening:
+  // TODO: this is what is happening:
   //0123456789
   //-feature--   //normal
   //--erutaef-   //reverse complemented

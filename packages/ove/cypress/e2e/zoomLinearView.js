@@ -30,7 +30,7 @@ describe("zoomLinearView.spec", function () {
     cy.get(`[data-test="sequenceLength"]`).select("10");
     cy.contains("GFPuv").should("not.exist");
   });
-  // tnr: maybe enable this some day
+  // TODO: maybe enable this some day
   // it("scroll wheel should zoom in/out", function () {
   //   cy.visit("#/Editor?focusLinearView=true");
   //   cy.get('.veLinearView .veRowItem').trigger("wheel", { deltaY: 66.666666, wheelDelta: 240, wheelDeltaX: 120, wheelDeltaY: 120, bubbles: true})

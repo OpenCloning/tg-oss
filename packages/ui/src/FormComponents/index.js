@@ -885,7 +885,7 @@ export const renderBlueprintNumericInput = ({
       onValueChange={(numericVal, stringVal) => {
         // needed for redux form to change value
         input.onChange(stringVal);
-        //tnr: use this handler if you want to listen to all value changes!
+        // TODO: use this handler if you want to listen to all value changes!
         onAnyNumberChange && onAnyNumberChange(numericVal);
       }}
       onButtonClick={function (numericVal, stringVal) {
@@ -1025,7 +1025,7 @@ export const withAbstractWrapper = (ComponentToWrap, opts = {}) => {
     const { inAssignDefaultsMode, setAssignDefaultsMode } = useContext(
       AssignDefaultsModeContext
     );
-    // tnr: we might want to grab this context object off the window in the future and have it live in lims by default
+    // TODO: we might want to grab this context object off the window in the future and have it live in lims by default
     // there is no reason for those vals to live in TRC. Example code below:
     // const workflowParams = useContext(window.__tgDefaultValParamsContext || defaultNullContext);
     const workflowParams = useContext(WorkflowDefaultParamsContext);

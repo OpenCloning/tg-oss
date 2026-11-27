@@ -190,7 +190,7 @@ let clearMe;
           inner(el.textContent, el, opts);
           break;
         } else if (isEllipsized && el.offsetWidth >= el.scrollWidth) {
-          // break; //tnr: i don't think we need this..
+          // break; // TODO: i don't think we need this..
         }
         el = el.parentElement;
       }

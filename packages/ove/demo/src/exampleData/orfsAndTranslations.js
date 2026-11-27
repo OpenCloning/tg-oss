@@ -227,7 +227,7 @@ const sequenceData = {
   ]
 };
 
-// tnr: this is used to generate a very large, multi-featured sequence
+// TODO: this is used to generate a very large, multi-featured sequence
 // var string = "ggggcccccgggggccc";
 // var reallyLongFakeSequence = "";
 // for (var i = 1; i < 100000; i++) {
