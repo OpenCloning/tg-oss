@@ -24,6 +24,11 @@ jobs:
         with:
           # just perform install
           runTests: false
+      # Yarn 4 does not run dependencies' install scripts (enableScripts defaults to false),
+      # so the cypress package's postinstall never downloads the binary. Quick no-op when
+      # the binary was restored from cypress-io/github-action's cache.
+      - name: Install Cypress binary
+        run: yarn cypress install
       # Both packages always run (there is no "affected" filtering without nx).
       # Each is its own Cypress Cloud project, and --parallel splits its specs across the machines.
       # TODO: these record keys used to be committed in project.json; move them to repository
