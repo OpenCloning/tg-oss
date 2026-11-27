@@ -1,10 +1,10 @@
-# TeselaGen Open Source Monorepo Guidance
+# tg-oss Monorepo Guidance
 
 Prefer bun over node for running scripts.
 
 ## Project Overview
 
-TeselaGen's monorepo contains multiple open-source packages focused on biological sequence visualization, manipulation, and analysis:
+This monorepo contains multiple open-source packages focused on biological sequence visualization, manipulation, and analysis:
 
 - **@opencloning/tg-oss-ove**: Open Vector Editor - DNA/AA sequence viewer and editor
 - **@opencloning/tg-oss-ui**: Reusable React UI components library

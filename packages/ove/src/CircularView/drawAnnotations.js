@@ -210,7 +210,7 @@ function drawAnnotations(props) {
           ellipsizedName = getEllipsizedName(totalAngle);
         }
 
-        // //tnr: WIP to try to adjust the inline label in the circular view to always show up even when zoomed in
+        // // TODO: WIP to try to adjust the inline label in the circular view to always show up even when zoomed in
         // if (ellipsizedName && isZoomedIn) {
         //   const nameAngle =
         //     ((ellipsizedName.length + 3) * 55) /

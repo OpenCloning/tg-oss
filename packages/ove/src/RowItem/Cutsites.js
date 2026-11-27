@@ -67,7 +67,7 @@ function getSnipConnector(
   charWidth,
   index
 ) {
-  //tnr: we basically need to first determine what the range start and end are..
+  // TODO: we basically need to first determine what the range start and end are..
   // var _snipRange = {
   //     ...snipRange,
   //     end: norm(snipRange.end-1,sequenceLength)

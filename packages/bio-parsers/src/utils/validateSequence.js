@@ -91,7 +91,7 @@ export default function validateSequence(sequence, options = {}) {
     );
   }
   if (sequence.isProtein) {
-    //tnr: add code to strip invalid protein data..
+    // TODO: add code to strip invalid protein data..
     const [validChars, warnings] = filterSequenceString(sequence.sequence, {
       name: sequence.name,
       isProtein: true,
@@ -156,7 +156,7 @@ export default function validateSequence(sequence, options = {}) {
     response.messages.push("No valid features detected");
     sequence.features = [];
   }
-  //tnr: maybe this should be wrapped in its own function (in case we want to use it elsewhere)
+  // TODO: maybe this should be wrapped in its own function (in case we want to use it elsewhere)
   sequence.features = sequence.features.filter(function (feature) {
     if (!feature || typeof feature !== "object") {
       response.messages.push("Invalid feature detected and removed");
@@ -251,7 +251,7 @@ export default function validateSequence(sequence, options = {}) {
         return false;
       })
     ) {
-      //tnr: commenting this logic out
+      // TODO: commenting this logic out
       if (coerceFeatureTypes || !feature.type) {
         response.messages.push(
           'Invalid feature type detected:  "' +

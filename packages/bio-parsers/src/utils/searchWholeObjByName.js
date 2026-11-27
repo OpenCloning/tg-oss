@@ -1,4 +1,4 @@
-//tnr: taken from https://github.com/angus-c/waldojs (not using waldojs as it is not being maintained and pulled in nasty babel runtime transforms)
+// TODO: taken from https://github.com/angus-c/waldojs (not using waldojs as it is not being maintained and pulled in nasty babel runtime transforms)
 /* eslint-disable eqeqeq */
 import { isEqual } from "lodash-es";
 

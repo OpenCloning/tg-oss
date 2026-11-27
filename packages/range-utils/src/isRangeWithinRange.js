@@ -1,4 +1,4 @@
-//TNR: THIS METHOD ONLY WORKS FOR COMPARING 0-BASED RANGES!!!!!!
+// TODO: THIS METHOD ONLY WORKS FOR COMPARING 0-BASED RANGES!!!!!!
 import trimRangeByAnotherRange from "./trimRangeByAnotherRange";
 
 export default function isRangeWithinRange(

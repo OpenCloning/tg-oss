@@ -49,7 +49,7 @@ describe("dataTable.spec", () => {
     cy.visit("#/DataTable");
     //  - copying a single row (selected or not)
     cy.get(`[data-test="tgCell_type.special"]`).first().click();
-    //tnr: typing both so that the hotkey is triggered even when running on tests on linux in CI (maybe it will be solved some day https://github.com/cypress-io/cypress/issues/8961)
+    // TODO: typing both so that the hotkey is triggered even when running on tests on linux in CI (maybe it will be solved some day https://github.com/cypress-io/cypress/issues/8961)
     cy.get(".data-table-container").type("{meta+c}");
     cy.get(".data-table-container").type("{ctrl+c}");
     cy.contains("Selected rows copied");
@@ -61,7 +61,7 @@ describe("dataTable.spec", () => {
     cy.get(`[name="checkBoxHeader"]`).click({ force: true }); //select all
     // cy.focused().type("{meta+a}");
     // cy.focused().type("{ctrl+a}");
-    //tnr: typing both so that the hotkey is triggered even when running on tests on linux in CI (maybe it will be solved some day https://github.com/cypress-io/cypress/issues/8961)
+    // TODO: typing both so that the hotkey is triggered even when running on tests on linux in CI (maybe it will be solved some day https://github.com/cypress-io/cypress/issues/8961)
     cy.get(".data-table-container").type("{meta+c}", { force: true });
     cy.get(".data-table-container").type("{ctrl+c}", { force: true });
     cy.contains("Selected rows copied").then(() => {
@@ -193,7 +193,7 @@ describe("dataTable.spec", () => {
       "have.value",
       "50"
     );
-    //tnw: this isn't working with the switch to vite
+    // TODO: this isn't working with the switch to vite
     cy.reload();
 
     cy.get(".data-table-container .paging-page-size").should(

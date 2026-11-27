@@ -59,7 +59,7 @@ describe("properties", function () {
     cy.contains(".bp3-dialog", "Truncate Annotations").should("be.visible");
   });
   it(`we should be able to view and edit a description in general properties
-  and have that visible within the genbank view as well we should be able to edit a description in general properties, not make any changes, hit ok, and have the description not clear (bug! https://github.com/TeselaGen/lims/issues/5492)
+  and have that visible within the genbank view as well we should be able to edit a description in general properties, not make any changes, hit ok, and have the description not clear (bug!)
   // and have that visible within the genbank view as well`, () => {
     cy.get(".veTabProperties").click();
     cy.get(`.tg-test-description`).contains("Edit").click();
@@ -84,7 +84,7 @@ describe("properties", function () {
     cy.get(`[data-tab-id="genbank"]`).click();
     cy.contains("DEFINITION").should("not.exist");
   });
-  // it(`we should be able to edit a description in general properties, not make any changes, hit ok, and have the description not clear (bug! https://github.com/TeselaGen/lims/issues/5492)
+  // it(`we should be able to edit a description in general properties, not make any changes, hit ok, and have the description not clear (bug!)
   // and have that visible within the genbank view as well`, () => {
   //   cy.get(".veTabProperties").click();
   //   cy.get(`.tg-test-description`)

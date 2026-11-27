@@ -63,14 +63,14 @@ export default function (state, action) {
   if (action.type === "SEQUENCE_DATA_UPDATE") {
     stateToPass = action.payload;
   }
-  //tnr: do a clone deep here in order to make sure we are using a totally new object for undo/redo tracking
+  // TODO: do a clone deep here in order to make sure we are using a totally new object for undo/redo tracking
   // stateToPass = cloneDeep(stateToPass);
 
   const newState = coreReducer(stateToPass, action);
   if (deepEqual(newState, state)) {
     return state;
   } else {
-    //tnr: do a clone deep here in order to make sure we are using a totally new object for undo/redo tracking
+    // TODO: do a clone deep here in order to make sure we are using a totally new object for undo/redo tracking
     // mm: we don't need this if we are not mutating the newState, which we shouldn't be doing.
     return {
       // ...cloneDeep(newState),

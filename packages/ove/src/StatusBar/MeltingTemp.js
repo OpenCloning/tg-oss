@@ -48,7 +48,7 @@ export default function MeltingTemp({
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://github.com/TeselaGen/tg-oss/blob/master/packages/sequence-utils/src/calculateNebTm.js"
+              href="https://github.com/manulera/tg-oss/blob/master/packages/sequence-utils/src/calculateNebTm.js"
             >
               algorithms
             </a>

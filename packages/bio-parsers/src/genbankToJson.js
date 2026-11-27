@@ -200,7 +200,7 @@ function genbankToJson(string, options = {}) {
 
       // IGNORE LINES: DO NOT EVEN PROCESS
       if (line.trim() === "" || key === ";") {
-        //tnr: don't add the following message because it is not particularly informative
+        // TODO: don't add the following message because it is not particularly informative
         // addMessage(
         //     "Warning: Empty line, or ';' detected. Ignoring line: " +
         //     line);

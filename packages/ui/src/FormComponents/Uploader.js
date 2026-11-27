@@ -162,7 +162,7 @@ const InnerDropZone = ({
       className={classnames("tg-dropzone", className, {
         "tg-dropzone-minimal": minimal,
         "tg-dropzone-active": isDragActive,
-        "tg-dropzone-reject": isDragReject, // tnr: the acceptClassName/rejectClassName doesn't work with file extensions (only mimetypes are supported when dragging). Thus we'll just always turn the drop area blue when dragging and let the filtering occur on drop. See https://github.com/react-dropzone/react-dropzone/issues/888#issuecomment-773938074
+        "tg-dropzone-reject": isDragReject, // TODO: the acceptClassName/rejectClassName doesn't work with file extensions (only mimetypes are supported when dragging). Thus we'll just always turn the drop area blue when dragging and let the filtering occur on drop. See https://github.com/react-dropzone/react-dropzone/issues/888#issuecomment-773938074
         "tg-dropzone-accept": isDragAccept,
         "tg-dropzone-disabled": dropzoneDisabled,
         "bp3-disabled": dropzoneDisabled
@@ -278,7 +278,7 @@ const Uploader = ({
   const handleSecondHalfOfUpload = useCallback(
     async ({ acceptedFiles, cleanedFileList }) => {
       // This onChange is not changing things, we need to check whether the error is here or later
-      onChange(cleanedFileList); //tnw: this line is necessary, if you want to clear the file list in the beforeUpload, call onChange([])
+      onChange(cleanedFileList); // TODO: this line is necessary, if you want to clear the file list in the beforeUpload, call onChange([])
       // beforeUpload is called, otherwise beforeUpload will not be able to truly cancel the upload
       const keepGoing = stableBeforeUpload.current
         ? await stableBeforeUpload.current(cleanedFileList, onChange)

@@ -72,12 +72,11 @@ const DemoPage = ({ moduleName, demos, showComponentList }) => {
                 )
               }
               packageName={`${moduleName}`}
-              testBadge={`[![@opencloning/tg-oss-${moduleName}](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/gwixeq/master&style=flat&logo=cypress)](https://cloud.cypress.io/projects/gwixeq/runs)`}
             />
 
             <a
               style={{ fontSize: 16 }}
-              href={`https://github.com/TeselaGen/tg-oss/tree/master/packages/${moduleName}`}
+              href={`https://github.com/manulera/tg-oss/tree/master/packages/${moduleName}`}
             >
               @opencloning/tg-oss-{`${moduleName}`}
             </a>

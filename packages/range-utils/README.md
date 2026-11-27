@@ -7,7 +7,6 @@
 - [Editing This Repo:](#editing-this-repo)
   - [All collaborators:](#all-collaborators)
 - [Updating this repo:](#updating-this-repo)
-  - [Teselagen collaborators:](#teselagen-collaborators)
   - [Outside collaborators:](#outside-collaborators)
 - [Building](#building)
 - [Running unit tests](#running-unit-tests)

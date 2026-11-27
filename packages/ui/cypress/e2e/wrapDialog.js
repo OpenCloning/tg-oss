@@ -21,7 +21,7 @@ describe("WrapDialog", () => {
   });
 
   it(`if multiple dialogs are present, only the top dialog will submit on enter with wrap dialog`, () => {
-    //tnr: we should probably change this to the top most dialog will always trigger?
+    // TODO: we should probably change this to the top most dialog will always trigger?
     cy.contains("Open another Dialog").click();
     cy.get(".second-dialog");
     cy.get(".second-dialog .imTgSelect input").type("lol{enter}"); //
@@ -32,7 +32,7 @@ describe("WrapDialog", () => {
   });
 
   it(`wrapDialog will block enter by default in the datatable search bar`, () => {
-    //tnr: we should probably change this to the top most dialog will always trigger?
+    // TODO: we should probably change this to the top most dialog will always trigger?
     cy.contains("Show a datatable").click();
     cy.get(`div[data-test-id="2"]`); //row 2 should exist
     cy.get(".datatable-search-input input").type("thomas{enter}"); //

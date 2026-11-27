@@ -68,7 +68,7 @@
 .veRowViewOrfsContainer {
   z-index: 20;
 }
-/* TNR: ENABLING THIS WILL BREAK SMOOTH SCROLLING FOR THE ROW VIEW
+/* TODO: ENABLING THIS WILL BREAK SMOOTH SCROLLING FOR THE ROW VIEW
 .rowViewTextContainer {
   user-select: none;
 } 

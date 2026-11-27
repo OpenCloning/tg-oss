@@ -1,7 +1,7 @@
 const exampleData = {
   id: "558d9a81f721c6b110000025",
   name_lowercase: "pbbs8c-rfp",
-  FQDN: "tnrich.pBbS8c-RFP",
+  FQDN: "example.pBbS8c-RFP",
   hash: "6580dff42e14e03986393225d08e320eafd52ca12faa20347e149c5327c48bbc",
   ve_metadata: "",
   sequence: "atgatagatagagagtatagacacccacatctatttttctacatcgcgcacgagcgacgataaa",

@@ -1,4 +1,4 @@
-//tnr: half finished test.
+// TODO: half finished test.
 
 import * as chai from "chai";
 import chaiSubset from "chai-subset";
@@ -462,7 +462,7 @@ describe("getSequenceDataBetweenRange", () => {
       ]
     });
   });
-  it("feature with locations, circular sequence, non-fully enclosing range range that cross the origin", () =>{
+  it("feature with locations, circular sequence, non-fully enclosing range range that cross the origin", () => {
     const res = getSequenceDataBetweenRange(
       {
         circular: true,
@@ -499,9 +499,12 @@ describe("getSequenceDataBetweenRange", () => {
           start: 3,
           end: 5,
           name: "testing",
-          locations: [{start:3, end:4}, {start:5, end:5}]
+          locations: [
+            { start: 3, end: 4 },
+            { start: 5, end: 5 }
+          ]
         }
       ]
     });
-  })
+  });
 });

@@ -19,7 +19,7 @@ export default function VersionSwitcher({
         if (window.Cypress) return;
         let res = await (
           await window.fetch(
-            "https://api.github.com/repos/teselagen/tg-oss/git/trees/gh-pages"
+            "https://api.github.com/repos/manulera/tg-oss/git/trees/gh-pages"
           )
         ).json();
         const packageNode = res.tree.find(e => {
@@ -63,7 +63,7 @@ export default function VersionSwitcher({
       {leftComponent}
       <div style={{ paddingTop: 13, display: "flex", marginRight: 20 }}>
         <iframe
-          src="https://ghbtns.com/github-btn.html?user=teselagen&repo=tg-oss&type=star&count=true"
+          src="https://ghbtns.com/github-btn.html?user=manulera&repo=tg-oss&type=star&count=true"
           frameBorder="0"
           scrolling="0"
           width="100"
@@ -77,7 +77,7 @@ export default function VersionSwitcher({
           <HTMLSelect
             minimal
             onChange={function onChange(e) {
-              window.location.href = `https://teselagen.github.io/tg-oss/${packageName}/version/${e.currentTarget.value}/#/Editor`;
+              window.location.href = `https://manulera.github.io/tg-oss/${packageName}/version/${e.currentTarget.value}/#/Editor`;
             }}
             value={version}
             options={options}
@@ -86,7 +86,7 @@ export default function VersionSwitcher({
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginLeft: 10, marginTop: 2 }}
-            href="https://github.com/TeselaGen/tg-oss/blob/master/CHANGELOG.md"
+            href="https://github.com/manulera/tg-oss/blob/master/CHANGELOG.md"
           >
             Changelog
           </a>

@@ -174,7 +174,7 @@ describe("genbank exporter/parser conversion", function () {
         }
       ]
     });
-    // tnr: the old string used to look like:
+    // TODO: the old string used to look like:
     //  j5_propagated_part2046..2063
     //                  /label="ssrA_tag_3prime"
     //                  /pragma="j5_lineage_annotation"

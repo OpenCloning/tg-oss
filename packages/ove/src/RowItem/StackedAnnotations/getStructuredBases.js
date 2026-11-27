@@ -36,7 +36,7 @@ export function getStructuredBases({
   let aRange;
   if (!wrapsOrigin) {
     aRange = {
-      //tnr: this probably needs to be changed in case annotation wraps origin
+      // TODO: this probably needs to be changed in case annotation wraps origin
       start: annotationRange.start - start,
       end: annotationRange.end - start
     };

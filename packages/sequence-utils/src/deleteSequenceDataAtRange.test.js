@@ -1,4 +1,4 @@
-//tnr: half finished test.
+// TODO: half finished test.
 
 import * as chai from "chai";
 

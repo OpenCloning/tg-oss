@@ -52,7 +52,7 @@ describe("cutsiteInfoView", function () {
     cy.contains(`[data-test="tg-column-3"]`, "XmlI (1 cut)");
     cy.contains(`[data-test="tg-column-3"]`, "XmaI (1 cut)");
     cy.contains(`[data-test="tg-column-2"]`, "specialEnzyme1 (1 cut)");
-    cy.contains(`[data-test="tg-column-1"]`, "bamhi (0 cuts)"); //tnr: should fix the name of the enzyme here
+    cy.contains(`[data-test="tg-column-1"]`, "bamhi (0 cuts)"); // TODO: should fix the name of the enzyme here
   });
   it(`clicking a cutsite should provide more info`, () => {
     cy.tgToggle("overrideManageEnzymes");

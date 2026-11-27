@@ -14,7 +14,7 @@ describe("fasta exporter/parser conversion", function () {
 MMHLRLF`);
   });
 
-  //tnw: I don't think this is possible because fasta does not have a well defined ordering of fields within the header
+  // TODO: I don't think this is possible because fasta does not have a well defined ordering of fields within the header
   // it("the description coming in should be the same as the description coming out", function() {
   //   const description = "Some sort of description"
   //   const string = jsonToFasta({

@@ -114,7 +114,7 @@ export default function Chromatogram(props) {
           // left: posOfSeqRead,
           display: "inline-block"
         }}
-        // tnr comment back in for start of tooltip work
+        // TODO: comment back in for start of tooltip work
         // onMouseEnter={() => {
         //   this.setState({ showTooltip: true });
         // }}
@@ -162,7 +162,7 @@ export default function Chromatogram(props) {
         //   if (n) this.chromatogramRef = n;
         // }}
       >
-        {/* tnr comment back in for start of tooltip work {this.state.showTooltip && (
+        {/* TODO: comment back in for start of tooltip work {this.state.showTooltip && (
           <div
             style={{
               position: "absolute",

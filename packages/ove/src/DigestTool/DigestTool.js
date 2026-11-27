@@ -148,13 +148,6 @@ export const DigestTool = props => {
           }
           disabled={computePartialDigestDisabled}
         />
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://docs.teselagen.com/en/articles/5489322-restriction-digest-in-the-vector-editor"
-        >
-          Read the docs
-        </a>
       </div>
       Choose your enzymes:
       <CutsiteFilter

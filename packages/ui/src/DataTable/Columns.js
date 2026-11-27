@@ -356,7 +356,7 @@ const renderCheckboxHeader = ({
     return isEntityDisabled(e) ? acc : acc + 1;
   }, 0);
   if (checkedRows.length === notDisabledEntityCount) {
-    //tnr: maybe this will need to change if we want enable select all across pages
+    // TODO: maybe this will need to change if we want enable select all across pages
     checkboxProps.checked = notDisabledEntityCount !== 0;
   } else {
     if (checkedRows.length) {

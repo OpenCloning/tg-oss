@@ -1,6 +1,5 @@
 /**
  * test file for the ab1ToJson parser
- * @author Thomas Rich @tnrich
  */
 import ab1ToJson from "../src/ab1ToJson";
 

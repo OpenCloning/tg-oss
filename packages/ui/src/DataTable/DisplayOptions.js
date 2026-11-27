@@ -61,7 +61,7 @@ const DisplayOptions = ({
                 <option className={Classes.POPOVER_DISMISS} value="normal">
                   Comfortable
                 </option>
-                {/* tnr: as you can see we're calling what was "compact" Normal now in response to https://github.com/TeselaGen/lims/issues/4713 */}
+                {/* TODO: as you can see we're calling what was "compact" Normal now */}
                 <option className={Classes.POPOVER_DISMISS} value="compact">
                   Normal
                 </option>

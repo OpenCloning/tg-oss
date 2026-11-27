@@ -79,7 +79,7 @@ export function getBasesToShow({
         // use an interval tree to determine the level the primer insert should be on to not overlap with other inserts
         const yOffset = getYOffset(iTree, xStart, xEnd);
         iTree.insert(xStart, xEnd, {
-          //tnr: pass an initial level in the case that the underlying primer ranges themselves are overlapping
+          // TODO: pass an initial level in the case that the underlying primer ranges themselves are overlapping
           ...annotationRange,
           yOffset
         });

@@ -64,7 +64,7 @@ const annotationClickHandlers = [
   "partClicked",
   "searchLayerClicked"
 ];
-//tnr: because this menu is being rendered outside the main render tree (by blueprint)
+// TODO: because this menu is being rendered outside the main render tree (by blueprint)
 //we need to make sure it re-renders whenever the redux state changes (so things like tick-marks will toggle properly etc..)
 const ConnectedMenu = withEditorProps(({ children }) => (
   <Menu>{children.map(React.cloneElement)}</Menu>

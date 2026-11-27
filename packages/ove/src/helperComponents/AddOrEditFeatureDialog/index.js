@@ -52,7 +52,7 @@ export default AddOrEditAnnotationDialog({
   },
   getProps: props => ({
     upsertAnnotation: props.upsertFeature,
-    // renderLocations: true, //tnw enable this eventually for proteins
+    // renderLocations: true, // TODO: enable this eventually for proteins
     renderLocations: !props.sequenceData.isProtein,
     RenderTypes,
     annotationTypePlural: "features"

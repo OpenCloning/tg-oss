@@ -57,7 +57,7 @@ export default ({ name, dir }: { name: string; dir: string }) =>
       },
       base: "./",
       plugins: [
-        //tnw - maybe add this back later after adding performance metrics https://twitter.com/aidenybai/status/1689773623827943424
+        // TODO: maybe add this back later after adding performance metrics https://twitter.com/aidenybai/status/1689773623827943424
         // million.vite({
         //   auto: true
         // }),

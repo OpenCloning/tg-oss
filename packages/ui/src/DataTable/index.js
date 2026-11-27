@@ -2306,7 +2306,7 @@ const DataTable = ({
             // that the id of the record gets added to the id map
             newIdMap = oldIdMap[rowId] ? oldIdMap : { [rowId]: { entity } };
 
-            // tgreen: this will refresh the selection with fresh data. The entities in redux might not be up to date
+            // TODO: this will refresh the selection with fresh data. The entities in redux might not be up to date
             const keyedEntities = keyBy(entities, getIdOrCodeOrIndex);
             forEach(newIdMap, (val, key) => {
               const freshEntity = keyedEntities[key];
@@ -2894,7 +2894,7 @@ const DataTable = ({
           compactClassName,
           {
             fullscreen,
-            in_cypress_test: window.Cypress, //tnr: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed
+            in_cypress_test: window.Cypress, // TODO: this is a hack to make cypress be able to correctly click the table without the sticky header getting in the way. remove me once https://github.com/cypress-io/cypress/issues/871 is fixed
             "dt-isViewable": isViewable,
             "dt-minimalStyle": minimalStyle,
             "no-padding": noPadding,

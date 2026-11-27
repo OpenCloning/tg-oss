@@ -33,7 +33,7 @@ describe("proteinEditor", function () {
     cy.contains(".veRowViewFeature", "NF").click({ force: true });
     cy.contains("Selecting 2 AAs from 1 to 2");
 
-    //tnr commenting this out for now. I've disabled editing feature locations
+    // TODO: commenting this out for now. I've disabled editing feature locations
     // cy.get(".veLabelText")
     //   .contains("araC")
     //   .trigger("contextmenu", { force: true });
@@ -269,7 +269,7 @@ describe("proteinEditor", function () {
 
     cy.get(`[data-tab-id="genbank"]`).click();
     cy.contains("protein_bind 1124..1162");
-    // cy.contains("join(7..25,29..49,501..885)"); //tnr: not allowing locations in proteins for the moment
+    // cy.contains("join(7..25,29..49,501..885)"); // TODO: not allowing locations in proteins for the moment
   });
 
   it(`should
